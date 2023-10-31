@@ -1,3 +1,64 @@
+:root{
+    --color-P : #006494;
+    --color-S : #CAE9FF;
+    --color-A : #FFC20B;
+    --color-C : #00A6FB;
+    --color-D : #003554;
+    --color-E : #F1F2F6;
+    --color-W : #ffffff;
+    --color-B : #000000;
+}
+
+/* ?COLORS */
+.colorP{
+    color: var(--color-P) !important;
+}
+.colorS{
+    color: var(--color-S) !important;
+}
+.colorA{
+    color: var(--color-A) !important;
+}
+.colorC{
+    color: var(--color-C) !important;
+}
+.colorD{
+    color: var(--color-D) !important;
+}
+.colorE{
+    color: var(--color-E) !important;
+}
+.colorW{
+    color: var(--color-W) !important;
+}
+.colorB{
+    color: var(--color-B) !important;
+}
+.bgP{
+    background-color: var(--color-P) !important;
+}
+.bgS{
+    background-color: var(--color-S) !important;
+}
+.bgA{
+    background-color: var(--color-A) !important;
+}
+.bgC{
+    background-color: var(--color-C) !important;
+}
+.bgD{
+    background-color: var(--color-D) !important;
+}
+.bgE{
+    background-color: var(--color-E) !important;
+}
+.bgW{
+    background-color: var(--color-W) !important;
+}
+.bgB{
+    background-color: var(--color-B) !important;
+}
+
 .footer {
     background-color: #000;
     color: #fff;
