@@ -1,0 +1,79 @@
+.footer {
+    background-color: #000;
+    color: #fff;
+    
+    padding: 10px 0;
+}
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+.copyright {
+    margin: 0;
+}
+
+.navbar {
+    background-color: orange !important; /* Sfondo arancione */
+}
+.navbar .nav-link i {
+    color: white; /* Icone bianche */
+}
+
+body{
+    background-image: url('https://wallpaperaccess.com/full/4640657.jpg');
+    height: fit-content;
+
+    margin: 0; /* Rimuove il margine predefinito del corpo */
+    padding: 0; /* Rimuove il riempimento predefinito del corpo */
+    height: 100%; /* Imposta l'altezza del corpo su 100% dell'altezza del viewport */
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; /* Imposta la posizione su relativa in modo che il pseudo-elemento possa essere posizionato in base a esso */
+}
+
+
+body::before {
+    content: "";
+    /* Colore di sfondo semi-trasparente nero */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* Posiziona il pseudo-elemento dietro all'immagine di sfondo */
+    height: 100%; /* Imposta l'altezza del pseudo-elemento al 100% dell'altezza del corpo */
+}
+
+ul {
+    list-style-type: none; /* Rimuove i puntini dalla lista */
+  }
+
+
+ul li:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease; /* Imposta il colore di riempimento delle icone su nero al passaggio del mouse */
+  }
+/* CSS personalizzato per il comportamento di allargamento al passaggio del mouse per la classe .card */
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
+  
+
+
+/* Cambia lo sfondo in bianco al passaggio del mouse */
+
+
+/* Cambia il colore del testo in nero al passaggio del mouse */
+.navbar:hover .nav-link {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.background{
+    
+    background-color: #fff;
+    width: fit-content;
+    height: fit-content;
+}
