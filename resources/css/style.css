@@ -82,7 +82,7 @@
 }
 
 body{
-    background-image: url('https://wallpaperaccess.com/full/4640657.jpg');
+    /* background-image: url('https://wallpaperaccess.com/full/4640657.jpg'); */
     height: fit-content;
 
     margin: 0; /* Rimuove il margine predefinito del corpo */
@@ -132,10 +132,21 @@ ul li:hover {
     transition: transform 0.3s ease;
 }
 
-.background{
+/* .background{
     
     background-color: #fff;
     width: fit-content;
     height: fit-content;
 }
+ */
 
+ .altezza-h-home{
+    height: 75vh;
+    position: relative;
+ }
+
+ .img-header-dx{
+    position: absolute;
+    top: 145px;
+    right: 300px;
+ }
