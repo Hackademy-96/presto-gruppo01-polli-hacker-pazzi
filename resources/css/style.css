@@ -173,3 +173,11 @@ ul li:hover {
     .card-registration .select-arrow {
     top: 13px;
     }
+
+    /* Create Form */
+    
+    @media (min-width: 1025px) {
+        .h-custom {
+        height: 100vh !important;
+        }
+        }
