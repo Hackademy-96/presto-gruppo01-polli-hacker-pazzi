@@ -75,14 +75,14 @@
 }
 
 .navbar {
-    background-color: orange !important; /* Sfondo arancione */
+    background-color: var(--color-P) !important; /* Sfondo arancione */
 }
 .navbar .nav-link i {
     color: white; /* Icone bianche */
 }
 
 body{
-    background-image: url('https://wallpaperaccess.com/full/4640657.jpg');
+    /* background-image: url('https://wallpaperaccess.com/full/4640657.jpg'); */
     height: fit-content;
 
     margin: 0; /* Rimuove il margine predefinito del corpo */
@@ -132,9 +132,44 @@ ul li:hover {
     transition: transform 0.3s ease;
 }
 
-.background{
+/* .background{
     
     background-color: #fff;
     width: fit-content;
     height: fit-content;
 }
+ */
+.bg-image{
+    
+      background-image: url('https://images.unsplash.com/photo-1458302488426-c9fe676e00b0?auto=format&fit=crop&q=80&w=1974&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+      height: 500px;
+      background-size: cover;
+      position: relative;
+      
+      
+}
+
+.bg-shadow{
+    background-color: rgba(0, 0, 0, 0.285);
+    height: 100%;
+    width: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   
+      
+}
+
+/* Form register e login */
+
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    line-height: 2.15;
+    padding-left: .75em;
+    padding-right: .75em;
+    }
+    .card-registration .select-arrow {
+    top: 13px;
+    }
