@@ -2,7 +2,7 @@
   <!-- Background image -->
   <div
     class="p-5 text-center bg-image"
-  >
+>
     <div class="mask bg-shadow">
       <div class="d-flex justify-content-center align-items-center h-100">
         <div class="text-white">
