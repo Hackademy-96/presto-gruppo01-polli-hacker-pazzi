@@ -163,3 +163,12 @@ ul {
       
 }
 
+.horizontal-radio-group {
+    display: flex; /* Utilizza il flexbox per allineare gli elementi in orizzontale */
+    align-items: center; /* Allinea verticalmente gli elementi al centro */
+}
+
+.horizontal-radio-group .form-check {
+    margin-right: 10px; /* Aggiunge un margine tra gli elementi radio */
+}
+
