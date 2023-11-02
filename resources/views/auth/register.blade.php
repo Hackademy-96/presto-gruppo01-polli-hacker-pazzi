@@ -13,6 +13,15 @@
               <div class="col-xl-6">
                 <div class="card-body p-md-5 text-black">
                   <h3 class="mb-5 text-uppercase colorC">Registrati </h3>
+                  @if ($errors->any())
+                  <div class="alert alert-danger">
+                    <ul>
+                      @foreach ($errors->all() as $error)
+                      <li>{{ $error }}</li>
+                      @endforeach
+                    </ul>
+                  </div>
+                  @endif
                   <form method="POST" action="/register">
                     @csrf                    
                     <div class="row">
@@ -110,7 +119,7 @@
                       {{-- <button type="button" class="btn btn-light btn-lg">Reset all</button> --}}
                       <button type="submit" class="btn bgA btn-lg ms-2">Invia</button>
                     </div>
-
+                    
                   </form>
                   
                 </div>

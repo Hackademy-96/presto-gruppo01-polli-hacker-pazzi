@@ -13,6 +13,15 @@
                             <div class="col-xl-6">
                                 <div class="card-body p-md-5 text-black text-center">
                                     <h3 class="mb-5 text-uppercase colorC">Bentornato!</h3>
+                                    @if ($errors->any())
+                                    <div class="alert alert-danger">
+                                        <ul>
+                                            @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                    @endif
                                     <form method="POST" action="/login">
                                         @csrf                    
                                         

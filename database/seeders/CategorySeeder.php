@@ -14,7 +14,7 @@ class CategorySeeder extends Seeder
     public function run(): void
     {
         $categories = ['#Abbigliamento','#Animali','#Antiquariato','#Arredamento','#Elettronica','#Giocattoli','#Libri & Manga','#Motori','#Musica','#Nerdzone'];
-        foreach ($categories as $category){
+        foreach($categories as $category){
             Category::create(['name'=>$category]);
         };
     }
