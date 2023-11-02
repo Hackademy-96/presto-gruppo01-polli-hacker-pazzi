@@ -10,7 +10,7 @@
                 <div class="card-body p-4 p-md-5">
                   <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Crea il tuo articolo!</h3>
       
-                  <form method="POST" action="{{route('article_create')}}" class="px-md-2">
+                  <form method="GET" action="{{route('article_create')}}" class="px-md-2">
       
                     <div class="form-outline mb-4">
                       <input wire:model='title' type="text" id="title" class="form-control" />
@@ -22,7 +22,7 @@
       
                         <div class="form-outline datepicker">
                           <input wire:model='description' type="longtext" class="form-control" id="description" />
-                          <label for="description" class="form-label">Descrizine</label>
+                          <label for="description" class="form-label">Descrizione</label>
                         </div>
       
                       </div>

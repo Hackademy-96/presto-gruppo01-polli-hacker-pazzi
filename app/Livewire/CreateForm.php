@@ -11,9 +11,6 @@ class CreateForm extends Component
     public $category;
     public $price;
 
-
-
-
     public function render()
     {
         return view('livewire.create-form');

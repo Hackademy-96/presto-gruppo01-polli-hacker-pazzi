@@ -16,4 +16,4 @@ use App\Http\Controllers\ArticleController;
 
 Route::get('/', [PublicController::class, 'welcome'])->name('welcome');
 // 
-Route::post('/article.create',[ArticleController::class , 'create'])->name('article_create');
+Route::get('/article.create',[ArticleController::class , 'create'])->name('article_create');

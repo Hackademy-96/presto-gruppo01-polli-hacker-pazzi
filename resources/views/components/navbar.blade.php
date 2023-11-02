@@ -30,6 +30,7 @@
             </li>
             @endguest
             @auth
+            <a class="nav-link fw-bold colorS" href=""> Ciao {{Auth::user()->name}}!</a>
             <li class="nav-item">
                 <form method="POST" action="/logout">
                     @csrf
@@ -42,7 +43,7 @@
                     
                 </form>
             </li>
-            <a class="nav-link fw-bold colorS" href=""> Ciao {{Auth::user()->name}}!</a>
+           
             <li class="nav-item">
                 <a class="nav-link" href="{{route('article_create')}}">
                     <i class="fas fa-sign-in-alt"></i> Crea il tuo annuncio!
