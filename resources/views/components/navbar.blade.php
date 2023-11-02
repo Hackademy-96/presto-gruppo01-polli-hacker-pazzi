@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light shadow sticky-top">
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow sticky-top text-white">
     <a class="navbar-brand" href="/">
         <i class="fas fa-home colorW" ></i> Home
     </a>
@@ -30,25 +30,22 @@
             </li>
             @endguest
             @auth
-            <a class="nav-link fw-bold colorS" href=""> Ciao {{Auth::user()->name}}!</a>
-            <li class="nav-item">
-                <form method="POST" action="/logout">
-                    @csrf
-                    <li class="nav-item nav-link active">
-                        <button class='nav-link'  type="submit">
-                            <i clbuttonss="fas fa-sign-in-alt"></i> Esci
-                        </button>
-                    </li>
-                    
-                    
-                </form>
-            </li>
-           
             <li class="nav-item">
                 <a class="nav-link" href="{{route('article_create')}}">
                     <i class="fas fa-sign-in-alt"></i> Crea il tuo annuncio!
                 </a>
             </li>
+            <li class="nav-item dropdown mx-3">
+                <a class="nav-link active dropdown-toggle fw-bold colorS" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Ciao {{Auth::user()->name}}</a>
+                <ul class="dropdown-menu">
+            <li class="dropdown-item">
+           <form method="POST" action="{{route('logout')}}">
+                @csrf
+            <button class="nav-link active" type="submit">Logout</button>
+        </form>
+        </li>
+            
+           
             @endauth
         </ul>
     </div>
