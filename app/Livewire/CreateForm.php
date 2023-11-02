@@ -5,6 +5,7 @@ namespace App\Livewire;
 use App\Models\Article;
 use Livewire\Component;
 use App\Models\Category;
+use Illuminate\Support\Facades\Auth;
 
 class CreateForm extends Component
 {
@@ -46,6 +47,7 @@ class CreateForm extends Component
             'title' => $this->title,
             'description' => $this->description,
             'price' => $this->price,
+            'user_id' => Auth::user()->id,
         ]);
         $this->reset();
        return redirect(route('welcome'))->with('message', 'Articolo caricato correttamente!');
