@@ -31,12 +31,12 @@
             @endguest
             @auth
             <li class="nav-item">
-                <a class="nav-link text-white" href="{{route('article_create')}}">
+                <a class="nav-link navlink text-white" href="{{route('article_create')}}">
                     <i class="fas fa-sign-in-alt"></i> Crea il tuo annuncio!
                 </a>
             </li>
             <li class="nav-item dropdown mx-3">
-                <a class="nav-link active dropdown-toggle fw-bold colorS" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Ciao {{Auth::user()->name}}</a>
+                <a class="nav-link navlink active dropdown-toggle fw-bold colorS" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Ciao {{Auth::user()->name}}</a>
                 <ul class="dropdown-menu">
             <li class="dropdown-item">
            <form method="POST" action="{{route('logout')}}">
