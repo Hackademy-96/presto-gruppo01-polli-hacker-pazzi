@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light shadow sticky-top text-white">
-    <a class="navbar-brand text-white" href="{{route('welcome')}}">
-        <i class="fas fa-home colorW ms-3"></i> Home
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow sticky-top">
+    <a class="navbar-brand text-white" href="/">
+        <i class="fas fa-home colorW" ></i> Home
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -8,30 +8,30 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link text-white ms-3" href="#">
+                <a class="nav-link navlink text-white" href="#">
                     <i class="fas fa-info-circle" ></i> Info
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white ms-3" href="#">
+                <a class="nav-link navlink text-white" href="#">
                     <i class="fas fa-envelope" ></i> Contatti
                 </a>
             </li>
             @guest
             <li class="nav-item">
-                <a class="nav-link text-white ms-3" href="{{route('register')}}">
+                <a class="nav-link navlink text-white" href="{{route('register')}}">
                     <i class="fas fa-user-plus"></i> Registrati
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white ms-3" href="{{route('login')}}">
+                <a class="nav-link text-white" href="{{route('login')}}">
                     <i class="fas fa-sign-in-alt"></i> Accedi
                 </a>
             </li>
             @endguest
             @auth
             <li class="nav-item">
-                <a class="nav-link text-white ms-3" href="{{route('article_create')}}">
+                <a class="nav-link text-white" href="{{route('article_create')}}">
                     <i class="fas fa-sign-in-alt"></i> Crea il tuo annuncio!
                 </a>
             </li>
