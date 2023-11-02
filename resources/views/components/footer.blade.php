@@ -1,37 +1,37 @@
 <!-- Footer -->
-<footer class="bgP text-center">
+<footer class="bgE text-center">
     <!-- Grid container -->
     <div class="container-fluid p-4">
       <!-- Section: Social media -->
       <section class="mb-4">
         <!-- Facebook -->
-        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-facebook-f"></i
+        <a class="btn btn-outline-light btn-floating m-1 bgD" href="#!" role="button"
+          ><i class="fab fa-facebook-f text-white"></i
         ></a>
   
         <!-- Twitter -->
-        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-twitter"></i
+        <a class="btn btn-outline-light btn-floating m-1 bgD" href="#!" role="button"
+          ><i class="fab fa-twitter text-white"></i
         ></a>
   
         <!-- Google -->
-        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-google"></i
+        <a class="btn btn-outline-light btn-floating m-1 bgD" href="#!" role="button"
+          ><i class="fab fa-google text-white"></i
         ></a>
   
         <!-- Instagram -->
-        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-instagram"></i
+        <a class="btn btn-outline-light btn-floating m-1 bgD" href="#!" role="button"
+          ><i class="fab fa-instagram text-white"></i
         ></a>
   
         <!-- Linkedin -->
-        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-linkedin-in"></i
+        <a class="btn btn-outline-light btn-floating m-1 bgD" href="#!" role="button"
+          ><i class="fab fa-linkedin-in text-white"></i
         ></a>
   
         <!-- Github -->
-        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-          ><i class="fab fa-github"></i
+        <a class="btn btn-outline-light btn-floating m-1 bgD" href="#!" role="button"
+          ><i class="fab fa-github text-white"></i
         ></a>
       </section>
       <!-- Section: Social media --> 

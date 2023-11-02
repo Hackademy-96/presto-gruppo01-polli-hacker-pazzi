@@ -75,7 +75,7 @@
 }
 
 .navbar {
-    background-color: var(--color-P) !important; /* Sfondo arancione */
+    background-color: var(--color-D) !important; /* Sfondo arancione */
 }
 .navbar .nav-link i {
     color: white; /* Icone bianche */
@@ -176,8 +176,12 @@ ul li:hover {
 
     /* Create Form */
     
+    .h-custom{
+        height: 300px !important;
+    }
+
     @media (min-width: 1025px) {
         .h-custom {
-        height: 100vh !important;
+        height: 75vh !important;
         }
         }
