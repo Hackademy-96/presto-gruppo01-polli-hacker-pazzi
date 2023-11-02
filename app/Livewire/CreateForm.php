@@ -48,7 +48,7 @@ class CreateForm extends Component
             'price' => $this->price,
         ]);
         $this->reset();
-       return redirect(route('welcome'));
+       return redirect(route('welcome'))->with('message', 'Articolo caricato correttamente!');
     }
 
     public function cleanForm(){
