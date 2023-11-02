@@ -111,10 +111,10 @@ ul {
   }
 
 
-ul li:hover {
+/* ul li:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease; /* Imposta il colore di riempimento delle icone su nero al passaggio del mouse */
-  }
+  /* } 
 /* CSS personalizzato per il comportamento di allargamento al passaggio del mouse per la classe .card */
 .card:hover {
     transform: scale(1.05);

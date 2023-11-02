@@ -24,7 +24,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white" href="{{route('login')}}">
+                <a class="nav-link navlink text-white" href="{{route('login')}}">
                     <i class="fas fa-sign-in-alt"></i> Accedi
                 </a>
             </li>
