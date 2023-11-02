@@ -1,5 +1,5 @@
 <div>
-  <section class="h-100 h-custom" style="background-color: #8fc4b7;">
+  <section class="h-100 h-custom bgP">
     <div class="container py-5 h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col-lg-8 col-xl-6">
@@ -9,6 +9,17 @@
             alt="Sample photo">
             <div class="card-body p-4 p-md-5">
               <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Crea il tuo articolo!</h3>
+              @if ($errors->any())
+              <div class="alert alert-danger mb-0">
+                <ul>
+                  @foreach ($errors->all() as $error)
+                  <li>
+                    {{$error}}
+                  </li>
+                  @endforeach
+                </ul>
+              </div>        
+              @endif
               
               <form  wire:submit.prevent='store' class="px-md-2">
                 
@@ -24,20 +35,18 @@
                       <input wire:model='description' type="longtext" class="form-control" id="description" />
                       <label for="description" class="form-label">Descrizione</label>
                     </div>
+                    <div class="form-outline datepicker">
+                      <input wire:model='price' type="longtext" class="form-control" id="price" />
+                      <label for="price" class="form-label">Prezzo</label>
+                    </div>
                     
                   </div>
                 </div>
+                @foreach ($categories as $category)
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                  <label class="form-check-label" for="flexRadioDefault1">
-                    Default radio
-                  </label>
-                </div>
-                @foreach ($collection as $item)
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                  <input wire:model.defer="category_id" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked value="{{$category->id}}" >
                   <label class="form-check-label" for="flexRadioDefault2">
-                    Default checked radio
+                    {{$category->name}}
                   </label>
                 </div>
                 @endforeach
