@@ -34,10 +34,10 @@
             <li class="nav-item">
                 <form method="POST" action="/logout">
                     @csrf
-                    <li class="nav-item">
-                        <a type="submit navlink">
-                            <i class="fas fa-sign-in-alt"></i> Esci
-                        </a>
+                    <li class="nav-item nav-link active">
+                        <button class='nav-link'  type="submit">
+                            <i clbuttonss="fas fa-sign-in-alt"></i> Esci
+                        </button>
                     </li>
                     
                     
