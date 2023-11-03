@@ -8,7 +8,7 @@
         <div class="text-white">
           <h1 class="mb-3">Presto</h1>
           <h4 class="mb-3">Compra, Vendi, Presto Presto!</h4>
-          <a class="btn btn-outline-light btn-lg" href="#!" role="button"
+          <a class="btn btn-outline-light btn-lg" href="{{route('article_index')}}" role="button"
           >Vai agli articoli</a
           >
         </div>

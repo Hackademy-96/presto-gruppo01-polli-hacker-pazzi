@@ -1,15 +1,8 @@
 <x-layout>
-        @if(session('message'))
-            <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                <strong>Congratulazioni! </strong>{{session('message')}}
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-        @endif
-    <x-header></x-header>
     <div class="container mt-100">
-        <h1 class='text-center mb-5'>Ecco gli ultimi Articoli:</h1>
+        
         <div class="row">
-            @foreach ($lastArticles as $article)
+            @foreach ($articles as $article)
                 
           
             <div class="col-md-4 col-sm-6">
@@ -20,17 +13,13 @@
                     </div></a>
                     <div class="card-body text-center">
                         <h4 class="card-title">{{$article->title}}</h4>
-                       <a class="btn btn-outline-primary btn-sm" href="{{route('article_show', compact('article'))}}" >Vai al dettaglio</a>
+                        <p class="text-muted">{{$article->description}}</p>
+                        <p class="text-muted">{{$article->price}}</p><a class="btn btn-outline-primary btn-sm" href="{{route('article_show', compact('article'))}}" >Vai al dettaglio</a>
                     </div>
                 </div>
             </div>
             @endforeach
-            
+            @foreach($categories as $category)
         </div>
     </div>
 </x-layout>
-
-
-
-
-

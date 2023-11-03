@@ -2,15 +2,40 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class ArticleController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+   
 
     public function create(){
 
         return view('article.create');
     }
     
-    
+    public function show(Article $article){
+        return view('show', compact('article'));
+    }
+
+    public function index(){
+        $articles = Article::all();
+        return view('article.index', compact('articles'));
+    }
+
+    public function prova(){
+        $articles = Article::all();
+        $categories = Category::all();
+        return view('prova', compact('articles', 'categories'));
+    }
+
+    public function categoryShow(Category $category){
+        $articles = Article::all();
+        return view('categoryShow', compact('category', 'articles'));
+    }
 }
