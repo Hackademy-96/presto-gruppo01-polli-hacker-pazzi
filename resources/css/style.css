@@ -75,7 +75,7 @@
 }
 
 .navbar {
-    background-color: var(--color-D) !important; /* Sfondo arancione */
+    background-color:  var(--color-D) !important;
 }
 .navbar .nav-link i {
     color: white; /* Icone bianche */
@@ -111,10 +111,10 @@ ul {
   }
 
 
-ul li:hover {
+/* ul li:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease; /* Imposta il colore di riempimento delle icone su nero al passaggio del mouse */
-  }
+  /* } 
 /* CSS personalizzato per il comportamento di allargamento al passaggio del mouse per la classe .card */
 .card:hover {
     transform: scale(1.05);
@@ -127,7 +127,7 @@ ul li:hover {
 
 
 /* Cambia il colore del testo in nero al passaggio del mouse */
-.navbar:hover .nav-link {
+.navlink:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease;
 }
@@ -141,8 +141,9 @@ ul li:hover {
  */
 .bg-image{
     
-      background-image: url('https://images.unsplash.com/photo-1458302488426-c9fe676e00b0?auto=format&fit=crop&q=80&w=1974&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-      height: 500px;
+      background-image: url('https://images-ext-1.discordapp.net/external/_oHHtdSFVBCetB6OW-Lvt6eCE95xUZxYVqktmM4WSNk/%3Fauto%3Dformat%26fit%3Dcrop%26q%3D80%26w%3D1974%26ixlib%3Drb-4.0.3%26ixid%3DM3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%253D%253D/https/images.unsplash.com/photo-1458302488426-c9fe676e00b0?width=791&height=593');
+      height:  400px;
+      background-repeat: no-repeat;
       background-size: cover;
       position: relative;
       
@@ -162,26 +163,12 @@ ul li:hover {
       
 }
 
-/* Form register e login */
+.horizontal-radio-group {
+    display: flex; /* Utilizza il flexbox per allineare gli elementi in orizzontale */
+    align-items: center; /* Allinea verticalmente gli elementi al centro */
+}
 
-.card-registration .select-input.form-control[readonly]:not([disabled]) {
-    font-size: 1rem;
-    line-height: 2.15;
-    padding-left: .75em;
-    padding-right: .75em;
-    }
-    .card-registration .select-arrow {
-    top: 13px;
-    }
+.horizontal-radio-group .form-check {
+    margin-right: 10px; /* Aggiunge un margine tra gli elementi radio */
+}
 
-    /* Create Form */
-    
-    .h-custom{
-        height: 300px !important;
-    }
-
-    @media (min-width: 1025px) {
-        .h-custom {
-        height: 75vh !important;
-        }
-        }

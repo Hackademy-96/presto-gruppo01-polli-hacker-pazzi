@@ -1,8 +1,8 @@
 <div>
   <section class="h-100 h-custom bgP">
-    <div class="container py-5 h-100">
+    <div class="container py-3 h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
-        <div class="col-12 col-md-6 col-lg-4">
+        <div class="col-md-8 col-lg-6">
           <div class="card rounded-3">
             <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img3.webp"
             class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;"
@@ -43,6 +43,7 @@
                   </div>
                 </div>
                 @foreach ($categories as $category)
+                
                 <div class="form-check">
                   <input wire:model.defer="category_id" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked value="{{$category->id}}" >
                   <label class="form-check-label" for="flexRadioDefault2">
@@ -55,7 +56,7 @@
                 
                 
                 
-                <button type="submit" class="btn btn-success btn-lg mb-1">Submit</button>
+                <button type="submit" class="btn bgA btn-lg mt-2 mb-1">Submit</button>
                 
               </form>
               
