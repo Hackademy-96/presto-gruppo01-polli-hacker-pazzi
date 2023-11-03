@@ -6,7 +6,7 @@
     <title>Presto</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
  
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
   
 </head>
 <body>

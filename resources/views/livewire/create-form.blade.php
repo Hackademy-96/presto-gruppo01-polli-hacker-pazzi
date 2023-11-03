@@ -3,7 +3,7 @@
     <div class="container py-3 h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col-md-8 col-lg-6">
-          <div class="card rounded-3">
+          <div class="card rounded-3 border border-0">
             <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img3.webp"
             class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;"
             alt="Sample photo">
