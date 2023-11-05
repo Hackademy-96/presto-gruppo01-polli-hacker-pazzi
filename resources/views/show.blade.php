@@ -1,13 +1,13 @@
 <x-layout>
     <div class="container">
         <div class="row justify-content-center ">
-            <div class="col-12 display-2 text-center p-3 titleShow mt-3">
+            <div class="col-12 display-2 text-center p-3 titleShow mt-5">
                 <h1 class="display-1 colorA ">Stai guardando {{$article->title}}!</h1>
             </div>
             <div class="container mb-5">
                 <div class="row justify-content-around bgE rounded-4">
                     
-                    <div class="ms-1 col-5 align-self-center mt-4">
+                    <div class="ms-1 col-md-5 align-self-center mt-4">
                         <h3>{{$article->title}}</h3>
                         <h5>{{$article->category->name}}</h5>
                         <small><i class="far fa-clock"></i> {{$article->created_at}}</small>
@@ -39,8 +39,28 @@
                             @endif --}}
                         </div>
                         
-                        <div class="col-6 my-5">
-                            <img class="imgH shadow-lg rounded-4" src="https://picsum.photos/500" alt="...">
+                        <div class="col-md-5 my-5">
+                        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner rounded-4 shadow-lg">
+    <div class="carousel-item active" data-bs-interval="10000">
+      <img src="https://picsum.photos/500" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="https://picsum.photos/501" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://picsum.photos/502" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
                         </div>
                     </div>
                     
