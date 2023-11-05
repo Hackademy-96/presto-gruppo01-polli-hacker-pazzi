@@ -81,6 +81,15 @@
     color: white; /* Icone bianche */
 }
 
+.navbar-custom{
+    margin: 5vh 15vh 0vh 15vh ;
+    border-radius: 10px;
+}
+
+.transition{ 
+    transition: 1s;
+}
+
 body{
     /* background-image: url('https://wallpaperaccess.com/full/4640657.jpg'); */
     height: fit-content;
@@ -240,4 +249,73 @@ a {
 }
 
 /* fine index card  */
+.section-padding {
+	padding:80px 0px;
+}
 
+.sectioner-header {
+	width:69%;
+	margin:0 auto;
+}
+.line {
+	height: 2px;
+	width: 50px;
+	background: #006494;
+	display: block;
+	margin: 20px auto 20px;
+}
+.line::after {
+	content:"";
+	position: absolute;
+	left: 50%;
+	width: 150px;
+	height: 2px;
+	border-bottom: 2px dashed #006494;
+	margin-left: -75px;
+}
+.sectioner-header p {
+	color:#818992;
+	font-size: 17px;
+}
+.section-content {
+	margin-top: 80px;
+}
+.icon-box {
+	margin-bottom:50px;
+}
+.icon-box i {
+	display: block;
+	position: relative;
+	width: 135px;
+	height: 135px;
+	border-radius: 100px;
+	background: #FFC20B;
+	background:  linear-gradient(to left, #FFC20B, #ffa10b);
+	color: #ffffff;
+	font-size: 50px;
+	line-height: 135px;
+	margin: 0 auto;
+}
+.icon-box h5 {
+	margin-top:30px;
+}
+.icon-box p {
+	color: #818992;
+	font-size: 14px;
+	width: 80%;
+	margin: 0 auto;
+}
+.about-btn {
+	background-color:#006494;
+	padding: 10px 40px;
+	color: white;
+	border-radius: 7px;
+	margin-top: 30px;
+	display: inline-block;
+	font-size: 18px;
+}
+.about-btn:hover {
+	transform: scale(1.05);
+    transition: transform 0.3s ease;
+	text-decoration:none;
+}

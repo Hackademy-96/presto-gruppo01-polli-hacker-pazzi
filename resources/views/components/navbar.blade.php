@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light shadow sticky-top">
+<nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top py-2 px-3 transition">
     <a class="navbar-brand text-white" href="/">
-        <i class="fas fa-home colorW" ></i> Home
+        <img src="https://companieslogo.com/img/orig/PRST_BIG.D-3cd298b6.png?t=1687683317" width=100px alt="">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>

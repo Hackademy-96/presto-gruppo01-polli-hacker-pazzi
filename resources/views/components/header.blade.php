@@ -12,7 +12,7 @@
           >Vai agli articoli</a>
           <h6 class="my-3">Oppure</h6>
           <a class="btn btn-outline-light btn-lg" href="{{route('article_create')}}" role="button"
-          >Caricara un articolo</a>
+          >Caricare un articolo</a>
         </div>
       </div>
     </div>

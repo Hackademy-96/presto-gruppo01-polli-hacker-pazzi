@@ -31,7 +31,7 @@
                 </div>
             </div>
             @endforeach
-            
+            <x-balloons></x-balloons>
         </div>
     </div>
 </x-layout>
