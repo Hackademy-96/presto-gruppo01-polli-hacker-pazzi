@@ -28,13 +28,13 @@
                   <label class="form-label" for="title">Titolo</label>
                 </div>
                 
+                <div class="form-floating">
+                  <textarea wire:model='description' class="form-control" placeholder="Leave a description here" id="floatingTextarea" style="height: 100px">Descrizione</textarea>
+                  <label for="floatingTextarea">Aggiungi la descrizione del tuo articolo</label>
+                </div>
+                <label for="floatingTextarea">Descrizione</label>
                 <div class="row">
-                  <div class="col-md-6 mb-4">
-                    
-                    <div class="form-outline datepicker">
-                      <input wire:model='description' type="longtext" class="form-control" id="description" />
-                      <label for="description" class="form-label">Descrizione</label>
-                    </div>
+                  <div class="col-md-6 mb-4 mt-4">
                     <div class="form-outline datepicker">
                       <input wire:model='price' type="longtext" class="form-control" id="price" />
                       <label for="price" class="form-label">Prezzo</label>

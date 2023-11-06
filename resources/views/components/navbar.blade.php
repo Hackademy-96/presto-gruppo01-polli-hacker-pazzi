@@ -8,11 +8,11 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
            
-            <li class="nav-item">
+            {{-- <li class="nav-item">
                 <a class="nav-link navlink text-white" href="#">
                     <i class="fas fa-envelope" ></i> Contatti
                 </a>
-            </li>
+            </li> --}}
             @guest
             <li class="nav-item">
                 <a class="nav-link navlink text-white" href="{{route('register')}}">
@@ -37,6 +37,11 @@
                  @endforeach
                 </ul>
               </div>
+              <li class="nav-item">
+                <a class="nav-link navlink text-white" href="{{route('article_index')}}">
+                    <i class="fa-solid fa-pen-to-square"></i></i> Tutti gli articoli
+                </a>
+            </li>
 
             @auth
             <li class="nav-item">
