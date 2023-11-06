@@ -47,15 +47,15 @@
             </div>
 
             <div class="col-md-3">
-              <div class="icon-box"> <i class="fa-solid fa-book navlink shadow" aria-hidden="true"></i>
-                <h5>Libri e Manga</h5>
+              <div class="icon-box"> <i class="fa-solid fa-futbol navlink shadow" aria-hidden="true"></i>
+                <h5>Giocattoli</h5>
                 <a href="{{('category.show/6')}}" class="about-btn">Scopri di più</a>
               </div>
             </div>
-
+            
             <div class="col-md-3">
-              <div class="icon-box"> <i class="fa-solid fa-futbol navlink shadow" aria-hidden="true"></i>
-                <h5>Giocattoli</h5>
+              <div class="icon-box"> <i class="fa-solid fa-book navlink shadow" aria-hidden="true"></i>
+                <h5>Libri e Manga</h5>
                 <a href="{{('category.show/7')}}" class="about-btn">Scopri di più</a>
               </div>
             </div>

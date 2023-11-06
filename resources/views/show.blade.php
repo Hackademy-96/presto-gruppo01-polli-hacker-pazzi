@@ -1,15 +1,15 @@
 <x-layout>
     <div class="container">
-        <div class="row justify-content-center ">
+        <div class="row justify-content-center">
             <div class="col-12 display-2 text-center p-3 titleShow mt-5">
-                <h1 class="display-1 colorA ">Stai guardando {{$article->title}}!</h1>
+                <h1 class="display-1 colorP ">Stai guardando {{$article->title}}!</h1>
             </div>
             <div class="container mb-5">
                 <div class="row justify-content-around bgE rounded-4">
                     
                     <div class="ms-1 col-md-5 align-self-center mt-4">
                         <h3>{{$article->title}}</h3>
-                        <h5>{{$article->category->name}}</h5>
+                        <h5 class="colorC">{{$article->category->name}}</h5>
                         <small><i class="far fa-clock"></i> {{$article->created_at}}</small>
                         <p><small>Caricato il: {{$article->created_at->format('d/m/Y')}} </small></p>
                         <p>Da: {{$article->user->name}}</p>
