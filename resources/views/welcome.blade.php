@@ -18,7 +18,7 @@
             @foreach ($lastArticles as $article)
                 
           
-            <div class="col-md-4 col-sm-6 mb-5">
+            <div class="col-md-6 col-sm-8 mb-5">
                 <div class="h-100 card  shadow-lg"><a class="card-img-tiles" href="#" data-abc="true">
                     <div class="inner">
                         <div class="main-img position-relative"><img src="https://picsum.photos/500" alt="Category">
