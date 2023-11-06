@@ -14,7 +14,8 @@ class PublicController extends Controller
     }
 
     public function searchArticles(Request $request){
-        $articles = Article::search($request->searched);
+        
+        $articles = Article::search($request->searched)->get();
         
         return view('article.index', compact('articles'));
     }

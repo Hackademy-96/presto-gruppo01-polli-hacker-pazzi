@@ -84,11 +84,14 @@
 .navbar-custom{
     margin: 5vh 15vh 0vh 15vh ;
     border-radius: 10px;
+    
 }
 
 .transition{ 
     transition: 1s;
 }
+
+
 
 body{
     /* background-image: url('https://wallpaperaccess.com/full/4640657.jpg'); */
@@ -318,4 +321,31 @@ a {
 	transform: scale(1.05);
     transition: transform 0.3s ease;
 	text-decoration:none;
+}
+
+
+
+
+
+
+
+
+@media (max-width:1024px) {
+    .navbar-custom{
+        margin:0vh;
+        border-radius: 0%;
+        position: fixed; 
+        transition: none;
+        margin-top: 3%;
+       
+    
+    }
+    /* .transition{
+        transition: none; 
+    } */
+
+    /* .fixed-top{
+        position: static !important;
+    } */
+    
 }
