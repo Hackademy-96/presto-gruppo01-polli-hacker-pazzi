@@ -12,8 +12,8 @@
             </div>
         </div>
     </div>
-    <div class="container mt-100">
-        <h1 class='text-center mb-5'>Ecco gli ultimi Articoli:</h1>
+    <div class="container mt-5">
+        <h1 class="text-center mb-5">Ecco gli ultimi Articoli:</h1>
         <div class="row">
             @foreach ($lastArticles as $article)
                 
