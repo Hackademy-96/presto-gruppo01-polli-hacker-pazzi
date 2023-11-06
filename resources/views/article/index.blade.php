@@ -3,7 +3,7 @@
         
         <div class="row">
             <div class="col-12 text-center mb-5">
-                <h1 class="display-1 colorD">Tutti gli articoli</h1>
+                <h1 class="display-1 colorP">Tutti gli articoli</h1>
             </div>
             @forelse ($articles as $article)
             <div class="col-md-4 col-sm-6 mb-5">

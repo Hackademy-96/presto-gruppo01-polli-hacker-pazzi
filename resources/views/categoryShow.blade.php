@@ -17,7 +17,7 @@
                 <div class="card-body text-center">
                     <h4 class="card-title">{{$article->title}}</h4>
                     <p class="text-muted">{{$article->description}}</p>
-                    <p class="text-muted">{{$article->price}}</p><a class="btn btn-outline-primary btn-sm" href="{{route('article_show', compact('article'))}}" >Vai al dettaglio</a>
+                    <p class="text-muted">{{$article->price}}</p><a class="btn bgA btn-sm" href="{{route('article_show', compact('article'))}}" >Vai al dettaglio</a>
                 </div>
             </div>
         </div>

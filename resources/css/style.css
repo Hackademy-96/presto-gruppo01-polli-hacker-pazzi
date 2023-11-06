@@ -185,9 +185,9 @@ ul {
 }
 
 /* index card  */
-body 
+body {
     
-
+}
                                 	.mt-100{
                                 		margin-top: 100px;
                                 	}
@@ -329,13 +329,15 @@ a {
 
 
 
-
 @media (max-width:1024px) {
     .navbar-custom{
         margin:0vh;
         border-radius: 0%;
         position: fixed; 
         transition: none;
+        margin-top: 3%;
+       
+    
     }
     /* .transition{
         transition: none; 
@@ -345,4 +347,11 @@ a {
         position: static !important;
     } */
     
+.card-new {
+    width: 95%;
+    height: 90%; /* Puoi regolare la larghezza come preferisci */
+    margin: 0 auto; /* Per centrare le card orizzontalmente */
+}
+
+
 }
