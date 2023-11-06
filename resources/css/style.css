@@ -185,9 +185,9 @@ ul {
 }
 
 /* index card  */
-body {
+body 
     
-}
+
                                 	.mt-100{
                                 		margin-top: 100px;
                                 	}
@@ -336,9 +336,6 @@ a {
         border-radius: 0%;
         position: fixed; 
         transition: none;
-        margin-top: 3%;
-       
-    
     }
     /* .transition{
         transition: none; 
