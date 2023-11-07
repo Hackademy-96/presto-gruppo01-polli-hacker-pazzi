@@ -18,8 +18,8 @@
             @foreach ($lastArticles as $article)
                 
           
-            <div class="col-md-4 col-sm-6 mb-5">
-                <div class="h-100 card  shadow-lg"><a class="card-img-tiles" href="#" data-abc="true">
+            <div class="col-12 col-md-6 col-lg-4 mb-5">
+                <div class="h-100 card card-new shadow-lg"><a class="card-img-tiles" href="#" data-abc="true">
                     <div class="inner">
                         <div class="main-img position-relative"><img src="https://picsum.photos/500" alt="Category">
                             <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bgC">

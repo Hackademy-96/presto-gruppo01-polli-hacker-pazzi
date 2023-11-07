@@ -1,7 +1,7 @@
 <x-layout>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-12 display-2 text-center p-3 titleShow mt-5">
+    <div class="container mt-100">
+        <div class="row justify-content-center ">
+            <div class="col-12 display-2 text-center p-3 titleShow mb-5">
                 <h1 class="display-1 colorP ">Stai guardando {{$article->title}}!</h1>
             </div>
             <div class="container mb-5">

@@ -12,5 +12,12 @@ class PublicController extends Controller
         $lastArticles = Article::latest()->take(6)->get();
         return view('welcome', compact('articles', 'lastArticles'));
     }
+
+    public function searchArticles(Request $request){
+        
+        $articles = Article::search($request->searched)->get();
+        
+        return view('article.index', compact('articles'));
+    }
 }
 

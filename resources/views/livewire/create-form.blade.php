@@ -21,22 +21,22 @@
               </div>        
               @endif
               
-              <form  wire:submit.prevent='store' class="px-md-2">
+              <form  wire:submit.prevent='store' class="px-md-2 mt-5">
                 
                 <div class="form-outline mb-4">
-                  <input wire:model='title' type="text" id="title" class="form-control" />
+                  <input wire:model.live='title' type="text" id="title" class="form-control @error('title') is-invalid @enderror"  />
                   <label class="form-label" for="title">Titolo</label>
                 </div>
                 
                 <div class="form-floating">
-                  <textarea wire:model='description' class="form-control" placeholder="Leave a description here" id="floatingTextarea" style="height: 100px">Descrizione</textarea>
+                  <textarea wire:model.live='description' class="form-control @error('description') is-invalid @enderror" placeholder="Leave a description here" id="floatingTextarea" style="height: 100px">Descrizione</textarea>
                   <label for="floatingTextarea">Aggiungi la descrizione del tuo articolo</label>
                 </div>
                 <label for="floatingTextarea">Descrizione</label>
                 <div class="row">
                   <div class="col-md-6 mb-4 mt-4">
                     <div class="form-outline datepicker">
-                      <input wire:model='price' type="longtext" class="form-control" id="price" />
+                      <input wire:model.live='price' type="longtext" class="form-control @error('price') is-invalid @enderror" id="price" />
                       <label for="price" class="form-label">Prezzo</label>
                     </div>
                     
@@ -45,7 +45,7 @@
                 @foreach ($categories as $category)
                 
                 <div class="form-check">
-                  <input wire:model.defer="category_id" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked value="{{$category->id}}" >
+                  <input wire:model.live.defer="category_id" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked value="{{$category->id}}" >
                   <label class="form-check-label" for="flexRadioDefault2">
                     {{$category->name}}
                   </label>
