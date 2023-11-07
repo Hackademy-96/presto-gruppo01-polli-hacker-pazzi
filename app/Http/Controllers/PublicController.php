@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\BecomeRevisor;
 use App\Models\Article;
 use Illuminate\Http\Request;
 
@@ -19,5 +20,7 @@ class PublicController extends Controller
         
         return view('article.index', compact('articles'));
     }
+
+   
 }
 

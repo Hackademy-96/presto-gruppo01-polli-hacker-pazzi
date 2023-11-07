@@ -99,7 +99,7 @@
             Registrati e clicca qui!
           </p>
           <p>
-            <a href="{{route('become.revisor')}}" class="text-reset">Diventa Revisore</a>
+            <a href="{{route('become.revisor')}}" class="text-reset btn bgA">Diventa Revisore</a>
           </p>
         </div>
         <!-- Grid column -->
