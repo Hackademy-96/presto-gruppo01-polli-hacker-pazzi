@@ -24,7 +24,7 @@ class ArticleController extends Controller
     }
 
     public function index(){
-        $articles = Article::all();
+        $articles = Article::where('is_accepted', true)->paginate(6);
         return view('article.index', compact('articles'));
     }
 

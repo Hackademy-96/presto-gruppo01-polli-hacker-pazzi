@@ -89,19 +89,17 @@
         <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
           <!-- Links -->
           <h6 class="text-uppercase fw-bold mb-4">
-            Useful links
+            Presto.it
           </h6>
           <p>
-            <a href="#!" class="text-reset">Pricing</a>
+            Lavora con noi 
+          </p>
+         
+          <p>
+            Registrati e clicca qui!
           </p>
           <p>
-            <a href="#!" class="text-reset">Settings</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Orders</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Help</a>
+            <a href="{{route('become.revisor')}}" class="text-reset">Diventa Revisore</a>
           </p>
         </div>
         <!-- Grid column -->

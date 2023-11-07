@@ -10,6 +10,14 @@
                 </div>
             @endif
             </div>
+            <div class="col-6 justify-content-center">
+                @if(session('access.denied'))
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    {{session('access.denied')}}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            @endif
+            </div>
         </div>
     </div>
     <div class="container mt-100">

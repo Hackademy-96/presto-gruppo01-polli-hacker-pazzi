@@ -23,4 +23,9 @@ class RevisorController extends Controller
         $article->setAccepted(false);
         return redirect()->back()->with('message', 'Annuncio rifiutato.');
     }
+
+    // public function becomeRevisor(){
+    //     Mail::to('admin@presto.it')->send(new BecomeRevisor(Auth::user()));
+    //     return redirect()->back()->with('message', 'Richiesta per diventare revisore inviata correttamente');
+    // }
 }

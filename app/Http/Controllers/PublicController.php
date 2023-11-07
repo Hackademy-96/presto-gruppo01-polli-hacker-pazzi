@@ -9,7 +9,7 @@ class PublicController extends Controller
 {
     function welcome() {
         $articles = Article::all();
-        $lastArticles = Article::latest()->take(6)->get();
+        $lastArticles = Article::where('is_accepted', true)->latest()->take(6)->get();
         return view('welcome', compact('articles', 'lastArticles'));
     }
 
