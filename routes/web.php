@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\RevisorController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,3 +23,10 @@ Route::get('/article.index',[ArticleController::class , 'index'])->name('article
 Route::get('/category.show/{category}',[ArticleController::class , 'categoryShow'])->name('categoryShow');
 
 Route::get('/articles.search',[PublicController::class , 'searchArticles'])->name('articles.search');
+
+Route::get('/revisor/home',[RevisorController::class , 'index'])->name('reviosr.index');
+Route::patch('/accept/article/{article}',[RevisorController::class , 'acceptArticle'])->name('revisor.accept_article');
+Route::patch('/reject/article/{article}',[RevisorController::class , 'rejectArticle'])->name('revisor.reject_article');
+
+
+
