@@ -21,7 +21,7 @@
                   
                     <!-- Message input -->
                     <div class="form-outline mb-4">
-                      <textarea name="message" class="form-control" id="form4Example3" rows="4"></textarea>
+                      <textarea name="body" class="form-control" id="form4Example3" rows="4"></textarea>
                       <label class="form-label" for="form4Example3">Message</label>
                     </div>
                 

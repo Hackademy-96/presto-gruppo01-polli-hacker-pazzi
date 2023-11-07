@@ -2,10 +2,10 @@
     <x-header></x-header>
     <div class="container mt-4">
         <div class="row text-center justify-content-center">
-            <div class="col-6">
+            <div class="col-12 text-center">
                 @if(session('message'))
-                <div class="alert alert-success alert-dismissible fade show" role="alert">
-                    <strong>Congratulazioni! </strong>{{session('message')}}
+                <div class="alert alert-success alert-dismissible fade show bunner" role="alert">
+                    <strong></strong>{{session('message')}}
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
             @endif
@@ -20,8 +20,8 @@
             </div>
         </div>
     </div>
-    <div class="container mt-100">
-        <h1 class='text-center mb-5'>Ecco gli ultimi Articoli:</h1>
+    <div class="container mt-5">
+        <h1 class="text-center mb-5">Ecco gli ultimi Articoli:</h1>
         <div class="row">
             @foreach ($lastArticles as $article)
                 
