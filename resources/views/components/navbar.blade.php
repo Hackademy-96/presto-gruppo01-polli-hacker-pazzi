@@ -41,16 +41,27 @@
 
                 <li class="nav-item">
                     <a class="nav-link navlink text-white" href="{{route('article_index')}}">
-                        <i class="fa-solid fa-pen-to-square"></i></i> Tutti gli articoli
+                        <i class="fa-solid fa-inbox"></i> Tutti gli articoli
                     </a>
                 </li>
                 
                 @auth
                 <li class="nav-item">
                     <a class="nav-link navlink text-white" href="{{route('article_create')}}">
-                        <i class="fa-solid fa-pen-to-square"></i></i> Crea il tuo annuncio!
+                        <i class="fa-solid fa-pen-to-square"></i> Crea il tuo annuncio!
                     </a>
                 </li>
+                @if (Auth::user()->is_revisor)
+                <li class="nav-item">
+                    <a class="nav-link navlink text-white" href="{{route('reviosr.index')}}">
+                        <i class="fa-solid fa-pen-to-square"></i> RevisorZone
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            {{App\Models\Article::toBeRevisionedCount()}}
+                            <span class="visually-hidden">Messaggi non letti</span>
+                        </span>
+                    </a>
+                </li>
+                @endif
                 
                 <li class="nav-item dropdown">
                     <a class="nav-link navlink active dropdown-toggle fw-bold colorS" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-user"></i> Ciao {{Auth::user()->name}}</a>
