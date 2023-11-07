@@ -30,8 +30,8 @@ Route::patch('/reject/article/{article}',[RevisorController::class , 'rejectArti
 
 
 Route::get('/richiesta/revisore',[RevisorController::class , 'becomeRevisor'])->middleware('auth')->name('become.revisor');
-
-// Route::get('/rendi/revisore{user}',[RevisorController::class , 'makeRevisor'])->name('make.revisor');
+Route::post('/becomerevisor/submit',[RevisorController::class,'submit'])->middleware('auth')->name('becomerevisor.submit');
+Route::get('/rendi/revisore{email}',[RevisorController::class , 'makeRevisor'])->name('make.revisor');
 
 
 

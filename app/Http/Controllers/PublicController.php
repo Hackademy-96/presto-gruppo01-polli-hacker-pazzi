@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\BecomeRevisor;
 use App\Models\Article;
 use Illuminate\Http\Request;
 
@@ -15,9 +16,11 @@ class PublicController extends Controller
 
     public function searchArticles(Request $request){
         
-        $articles = Article::search($request->searched)->get();
+        $articles = Article::search($request->searched)->orderBy('created_at', 'desc')->where('is_accepted', true)->paginate(10);
         
         return view('article.index', compact('articles'));
     }
+
+   
 }
 
