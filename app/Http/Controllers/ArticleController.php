@@ -24,18 +24,18 @@ class ArticleController extends Controller
     }
 
     public function index(){
-        $articles = Article::all();
+        $articles = Article::orderBy('created_at', 'desc')->where('is_accepted', true)->paginate(6);
         return view('article.index', compact('articles'));
     }
 
-    public function prova(){
+    /* public function prova(){
         $articles = Article::all();
         $categories = Category::all();
         return view('prova', compact('articles', 'categories'));
-    }
+    } */
 
     public function categoryShow(Category $category){
-        $articles = Article::all();
+        $articles = Article::orderBy('created_at', 'desc')->where('is_accepted', true)->paginate(6);
         return view('categoryShow', compact('category', 'articles'));
     }
 }

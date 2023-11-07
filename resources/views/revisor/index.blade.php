@@ -1,8 +1,8 @@
 <x-layout>
     <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h1>
+        <div class="row mt-5">
+            <div class="col-12 mt-5">
+                <h1 class="text-center">
                     {{$article_to_check ? 'Ecco l\'annuncio da revisionare' : 'Non ci sono annunci da revisionare'}}
 
                 </h1>
