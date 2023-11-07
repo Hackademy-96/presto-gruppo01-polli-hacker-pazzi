@@ -2,10 +2,10 @@
     <x-header></x-header>
     <div class="container mt-4">
         <div class="row text-center justify-content-center">
-            <div class="col-6">
+            <div class="col-12 text-center">
                 @if(session('message'))
-                <div class="alert alert-success alert-dismissible fade show" role="alert">
-                    <strong>Congratulazioni! </strong>{{session('message')}}
+                <div class="alert alert-success alert-dismissible fade show bunner" role="alert">
+                    <strong></strong>{{session('message')}}
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
             @endif

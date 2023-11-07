@@ -18,13 +18,15 @@ class BecomeRevisor extends Mailable
     /**
      * Create a new message instance.
      */
-    // public $name;
-    // public $message;
-    // public $email;
-    public $user;
-    public function __construct(User $user)
+    public $name;
+    public $body;
+    public $email; 
+    
+    public function __construct($name, $email, $body)
     {
-        $this->user = $user;
+        $this->name = $name;
+        $this->email = $email;
+        $this->body = $body;
     }
 
     /**
@@ -33,8 +35,8 @@ class BecomeRevisor extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Grazie per la tua richiesta :),ti risponderemo a breve!',
-            from : new Address('admin@presto.it', 'admin presto'),
+            subject: 'Un nuovo utente ha fatto richiesta per divenire revisore',
+            from: new Address('presto.it@noreply.com'),
         );
     }
 
