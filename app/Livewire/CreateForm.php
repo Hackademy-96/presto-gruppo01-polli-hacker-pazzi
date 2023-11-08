@@ -12,7 +12,7 @@ class CreateForm extends Component
 {
     use WithFileUploads;
     
-    public $image;
+    public $article;
     public $images = [];
     public $temporary_images;
     public $title;
@@ -20,7 +20,7 @@ class CreateForm extends Component
     public $price;
     public $category_id;
     public $categories;
-
+    
     protected $rules=[
         'title' => "required|min:5",
         'description'=> "required|min:10",
@@ -28,8 +28,8 @@ class CreateForm extends Component
         'images.*'=>"image|max:1024",
         'temporary_images.*'=>"image|max:1024"
     ];
-
-
+    
+    
     protected $messages=[
         'title.required'=>"Il titolo è obbligatorio",
         'title.min'=>"Il titolo deve avere almeno cinque caratteri",
@@ -42,69 +42,85 @@ class CreateForm extends Component
         'temporary_images.*.max'=>"L'immagine deve essere massimo di 1mb",
         'images.image'=>"L'immagine dev'essere un immagine",
         'images.max'=>"L'immagine dev'essere di 1mb",
-
-
+        
+        
     ];
-
+    
     public function updatedTemporaryImages(){
         if($this->validate([
             'temporary_images.*'=>'image'
-        ])) {
-            foreach($this->temporary_images as $image){
-                $this->images[]= $image;
-            }
-        }
-    }
-
-    public function removeImage($key){
-        if (in_array($key, array_keys($this->images)))
-        {unset($this->images[$key]);
-
-        }
-    }
-
-    
-    public function updated($property){
-        $this->validateOnly($property);
-    }
-    
-    
-    public function store(){
-        
-        $this->validate();
-        
-        $article = Category::find($this->category_id)->articles()->create([
-            'title' => $this->title,
-            'description' => $this->description,
-            'price' => $this->price,
-            'user_id' => Auth::user()->id,
-        ]);
-        
-        if(count($article->images)){
-            foreach($this->images as $image){
-                $this->article->images()->create(['path'=>$image->store('public/images')]);
+            ])) {
+                foreach($this->temporary_images as $image){
+                    $this->images[]= $image;
+                }
             }
         }
         
+        public function removeImage($key){
+            if (in_array($key, array_keys($this->images)))
+            {
+                unset($this->images[$key]);
+            }
+        }
+        public function store()
+        {
+            $this->validate();
+            $article = Category::find($this->category_id)->articles()->create([
+                'title' => $this->title,
+                'description' => $this->description,
+                'price' => $this->price,
+                'user_id' => Auth::user()->id,
+            ]);
+            $article->save();
+            
+            if(count($this->images)){
+                foreach($this->images as $image){
+                    $article->images()->create(['path'=>$image->store('images','public')]);
+                }
+            }
+            
+            return redirect(route('welcome'))->with('message', "Articolo inviato! Verrà revisionato a breve!");
+            $this->reset();
+            
+        }
         
-        // 
-        $this->article->user()->associate(Auth::user());
-        $this->article->save();
-
-        $this->reset();
-       return redirect(route('welcome'))->with('message', "Articolo inviato! Verrà revisionato a breve!");
-    }
-
-    public function cleanForm(){
-        $this->title = '';
-        $this->description = '';
-        $this->price = '';
-    }
-
-    public function render()
-    {
-        return view('livewire.create-form');
-    }
-
-    
-}
+        public function updated($propertyName){
+            $this->validateOnly($propertyName);
+        }
+        
+        
+        // public function store(){
+            
+            //     $this->validate();
+            
+            //     $article = Category::find($this->category_id)->articles()->create([
+                //         'title' => $this->title,
+                //         'description' => $this->description,
+                //         'price' => $this->price,
+                //         'user_id' => Auth::user()->id,
+                //     ]);
+                
+                //     if(count($article->images)){
+                    //         foreach($this->images as $image){
+                        //             $this->article->images()->create(['path'=>$image->store('public/images')]);
+                        //         }
+                        //     }
+                        
+                        //     $this->reset();
+                        //    return redirect(route('welcome'))->with('message', "Articolo inviato! Verrà revisionato a breve!");
+                        // }
+                        
+                        public function cleanForm(){
+                            $this->title = '';
+                            $this->description = '';
+                            $this->price = '';
+                        }
+                        
+                        public function render()
+                        {
+                            return view('livewire.create-form');
+                        }
+                        
+                        
+                    }
+                    

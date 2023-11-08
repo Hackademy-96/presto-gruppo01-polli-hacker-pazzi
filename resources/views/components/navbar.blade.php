@@ -54,7 +54,7 @@
                 @if (Auth::user()->is_revisor)
                 <li class="nav-item">
                     <a class="nav-link navlink text-white" href="{{route('revisor.index')}}">
-                        <i class="fa-solid fa-pen-to-square"></i> RevisorZone
+                        <i class="fa-solid fa-id-card fa-lg"></i> RevisorZone
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                             {{App\Models\Article::toBeRevisionedCount()}}
                             <span class="visually-hidden">Messaggi non letti</span>
@@ -64,7 +64,7 @@
                 @endif
                 
                 <li class="nav-item dropdown">
-                    <a class="nav-link navlink active dropdown-toggle fw-bold colorS" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-user"></i> Ciao {{Auth::user()->name}}</a>
+                    <a class="nav-link navlink active dropdown-toggle fw-bold nav-text-custom" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-user"></i> Ciao {{Auth::user()->name}}</a>
                     <ul class="dropdown-menu">
                         <li class="dropdown-item">
                             <form method="POST" action="{{route('logout')}}">

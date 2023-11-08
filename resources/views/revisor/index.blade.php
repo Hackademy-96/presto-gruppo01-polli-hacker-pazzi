@@ -14,7 +14,15 @@
     <div class="container">
         <div class="row justify-content-center mt-5">
             <div class="card " style="width: 40rem;">
-                <img src="https://picsum.photos/800" class="card-img-top" alt="...">
+                @if ($article_to_check->images)
+                @foreach ($article_to_check->images as $image)
+                <div>
+                    <img class="card-img-top" src="{{Storage::url($image->path)}}" alt="">
+                </div>
+                @endforeach
+                    
+                @endif
+                {{-- <img src="https://picsum.photos/800" class="card-img-top" alt="..."> --}}
                 <div class="card-body">
                     <h4 class="card-title">{{$article_to_check->title}}</h4>
                   <p class="card-text">{{$article_to_check->description}}...</p>

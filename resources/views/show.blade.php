@@ -47,6 +47,7 @@
     </div>
     <div class="carousel-item" data-bs-interval="2000">
       <img src="https://picsum.photos/501" class="d-block w-100" alt="...">
+      {{-- <img src="{{!$article->images()->get()->isEmpty() ? Storage::url($article->images()->first()->path) : 'https://picsum.photos/500'}}" class="d-block w-100" alt="..."> --}}
     </div>
     <div class="carousel-item">
       <img src="https://picsum.photos/502" class="d-block w-100" alt="...">
