@@ -52,18 +52,37 @@
                 </div>
                 @endforeach
                 
+                <div>
+                  <input type="file" wire:model="temporary_images" name="images" multiple class="form-control shadow @error('temporary_images.*') is-invalid @enderror" placeholder="Img"/>
+                  @error('temporary_images.*')
+                  <p class="text-danger mt-2">{{$message}}</p>
+                  @enderror
+                </div>
                 
-                
-                
-                
-                <button type="submit" class="btn bgA btn-lg mt-2 mb-1">Submit</button>
-                
-              </form>
+                @if(!empty($images))
+                <div class="row">
+                  <div class="col-12">
+                    <div class="row">
+                      @foreach($images as $key=>$image)
+                      <div class="col">
+                        <div class="img-preview mx-auto shadow rounded"  style="background-image: url({{$image->temporaryUrl()}}); background-position:center;">
+                        </div>
+                        <button type="button" class="btn bgA shadow d-block text-center mt-2 mx-auto" wire:click="removeImage({{$key}})">Cancella</button>
+                    </div>
+                    @endforeach
+                  </div>
+                </div>
+              </div>
+              @endif
               
-            </div>
+              <button type="submit" class="btn bgA btn-lg mt-2 mb-1">Submit</button>
+              
+            </form>
+            
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 </div>

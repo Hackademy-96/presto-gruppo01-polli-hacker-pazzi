@@ -135,6 +135,7 @@ ul {
   
 
 
+
 /* Cambia lo sfondo in bianco al passaggio del mouse */
 
 
@@ -143,7 +144,12 @@ ul {
     transform: scale(1.05);
     transition: transform 0.3s ease;
 }
+ /* immagine  */
+.img-preview{
+    width: 300px;
+    height: 300px;
 
+}
 /* .background{
     
     background-color: #fff;
@@ -333,7 +339,7 @@ a {
 
 
 
-@media (max-width:1024px) {
+@media (max-width:1280px) {
     .navbar-custom{
         margin:0vh;
         border-radius: 0%;
@@ -356,6 +362,7 @@ a {
     height: 90%; /* Puoi regolare la larghezza come preferisci */
     margin: 0 auto; /* Per centrare le card orizzontalmente */
 }
+
 
 
 }
