@@ -18,14 +18,15 @@ class RevisorController extends Controller
     }
 
     public function acceptArticle(Article $article)
-    {
+    {   
         $article->setAccepted(true);
-        return redirect()->back()->with('message', 'Annuncio accettato.');
+        
+        return redirect(route('welcome'))->with('message', 'Annuncio accettato.');
     }
     public function rejectArticle(Article $article)
     {
         $article->setAccepted(false);
-        return redirect()->back()->with('message', 'Annuncio rifiutato.');
+        return redirect(route('welcome'))->with('message', 'Annuncio rifiutato.');
     }
     public function becomeRevisor(){
         return view('auth.formRevisor');
