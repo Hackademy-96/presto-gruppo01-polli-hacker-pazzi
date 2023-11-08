@@ -51,8 +51,15 @@ class CreateForm extends Component
             'temporary_images.*'=>'image'
         ])) {
             foreach($this->temporary_images as $image){
-                $this->image[]= $image;
+                $this->images[]= $image;
             }
+        }
+    }
+
+    public function removeImage($key){
+        if (in_array($key, array_keys($this->images)))
+        {unset($this->images[$key]);
+
         }
     }
 
@@ -60,21 +67,30 @@ class CreateForm extends Component
     public function updated($property){
         $this->validateOnly($property);
     }
-
+    
+    
     public function store(){
-        // $article = Article::create([
-        //     'title' => $this->title,
-        //     'description' => $this->description,
-        //     'price' => $this->price,
-        //     'categories'=> $this->category_id,
-
-        // ]);
+        
+        $this->validate();
+        
         $article = Category::find($this->category_id)->articles()->create([
             'title' => $this->title,
             'description' => $this->description,
             'price' => $this->price,
             'user_id' => Auth::user()->id,
         ]);
+        
+        if(count($article->images)){
+            foreach($this->images as $image){
+                $this->article->images()->create(['path'=>$image->store('public/images')]);
+            }
+        }
+        
+        
+        // 
+        $this->article->user()->associate(Auth::user());
+        $this->article->save();
+
         $this->reset();
        return redirect(route('welcome'))->with('message', "Articolo inviato! Verrà revisionato a breve!");
     }

@@ -74,8 +74,8 @@
                 </div>
               </div>
               @endif
-              
               <button type="submit" class="btn bgA btn-lg mt-2 mb-1">Submit</button>
+            
               
             </form>
             
