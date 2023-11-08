@@ -50,7 +50,7 @@ class CreateForm extends Component
             'user_id' => Auth::user()->id,
         ]);
         $this->reset();
-       return redirect(route('welcome'))->with('message', 'Articolo caricato correttamente!');
+       return redirect(route('welcome'))->with('message', "Articolo inviato! Verrà revisionato a breve!");
     }
 
     public function cleanForm(){

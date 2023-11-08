@@ -35,7 +35,8 @@ class ArticleController extends Controller
     } */
 
     public function categoryShow(Category $category){
-        $articles = Article::orderBy('created_at', 'desc')->where('is_accepted', true)->paginate(6);
+        $articles = Article::all()->where('is_accepted', true);
+       
         return view('categoryShow', compact('category', 'articles'));
     }
 }

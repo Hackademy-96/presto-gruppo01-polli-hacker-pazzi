@@ -24,7 +24,7 @@ Route::get('/category.show/{category}',[ArticleController::class , 'categoryShow
 
 Route::get('/articles.search',[PublicController::class , 'searchArticles'])->name('articles.search');
 
-Route::get('/revisor/home',[RevisorController::class , 'index'])->middleware('isRevisor')->name('reviosr.index');
+Route::get('/revisor/home',[RevisorController::class , 'index'])->middleware('isRevisor')->name('revisor.index');
 Route::patch('/accept/article/{article}',[RevisorController::class , 'acceptArticle'])->middleware('isRevisor')->name('revisor.accept_article');
 Route::patch('/reject/article/{article}',[RevisorController::class , 'rejectArticle'])->middleware('isRevisor')->name('revisor.reject_article');
 

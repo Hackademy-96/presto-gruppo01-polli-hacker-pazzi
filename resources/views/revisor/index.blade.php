@@ -9,6 +9,7 @@
             </div>
         </div>
     </div>
+    
     @if ($article_to_check)
     <div class="container">
         <div class="row justify-content-center mt-5">
@@ -28,7 +29,7 @@
             </div>
         </div>
     </div>
-    @endif
+
     <div class="conteiner my-5">
         <div class="row justify-content-evenly text-center">
             <div class="col-6 ">
@@ -38,6 +39,7 @@
                     <button class="btn bgA btn-lg" type="submit">Accetta</button>
                 </form>
             </div>
+            
             <div class="col-6">
                 <form action="{{route('revisor.reject_article', ['article'=>$article_to_check])}}" method="POST">
                     @csrf
@@ -48,4 +50,6 @@
             </div>
         </div> 
     </div>
+    @endif
+    
 </x-layout>
