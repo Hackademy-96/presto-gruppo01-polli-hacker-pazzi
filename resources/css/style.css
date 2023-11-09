@@ -316,9 +316,24 @@ a{
     width: fit-content;
     display: flex;
     justify-content: center;
+
 }
 /* ? what is this? who knos */
 
+img{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.borderRev{
+    width: fit-content;
+    height: fit-content;
+}
+
+.imgCarousel{
+    
+    height: 500px;
+}
 
 /* ? inizio media query */
 /* ! media query navbar */

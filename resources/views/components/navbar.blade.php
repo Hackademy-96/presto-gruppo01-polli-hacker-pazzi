@@ -28,7 +28,7 @@
                 @endguest
                 
                 <div class="nav-item dropdown">
-                    <a class="nav-link btn btn-secondary dropdown-toggle text-white text-start" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link navlink dropdown-toggle text-white text-start" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fa-solid fa-hashtag"></i> Categorie
                     </a>
                     
@@ -53,12 +53,15 @@
                 </li>
                 @if (Auth::user()->is_revisor)
                 <li class="nav-item">
-                    <a class="nav-link navlink text-white" href="{{route('revisor.index')}}">
-                        <i class="fa-solid fa-id-card fa-lg"></i> RevisorZone
-                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                            {{App\Models\Article::toBeRevisionedCount()}}
-                            <span class="visually-hidden">Messaggi non letti</span>
-                        </span>
+                    <a class="nav-link navlink text-white position-relative" href="{{route('revisor.index')}}">
+                        <i class="fa-solid fa-id-card fa-lg ">
+                            @if(App\Models\Article::toBeRevisionedCount() > 0)
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                {{App\Models\Article::toBeRevisionedCount()}}
+                                <span class="visually-hidden">Messaggi non letti</span>
+                            </span>
+                            @endif
+                        </i> RevisorZone
                     </a>
                 </li>
                 @endif

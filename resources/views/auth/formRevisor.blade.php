@@ -1,14 +1,17 @@
 <x-layout>
-    <div class="container">
-        <div class="row mt-5">
-            <div class="col-12 mt-5">
-                <h1 class="text-center">Diventa un revisore!</h1>
+    <div class="container bgE borderRev shadow  ">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-6 mt-5">
+                <h1 class=" mt-5 mb-5 text-center">Diventa un revisore!</h1>
             </div>
-            <div class="col-6">
+            <div class="row justify-content-center">
+
+            
+            <div class="col-12 col-md-6 col-lg-8 ">
                 <form method="POST" action="{{route('becomerevisor.submit')}}">
                     @csrf
                     <!-- Name input -->
-                    <div class="form-outline mb-4">
+                    <div class="form-outline mb-4 ">
                       <input name="name" type="text" id="form4Example1" class="form-control" />
                       <label class="form-label" for="form4Example1">Name</label>
                     </div>
@@ -26,8 +29,9 @@
                     </div>
                 
                     <!-- Submit button -->
-                    <button type="submit" class="btn btn-primary btn-block mb-4">Send</button>
+                    <button type="submit" class="btn bgA btn-block mb-4">Send</button>
                   </form>
+            </div>
             </div>
            
         </div>

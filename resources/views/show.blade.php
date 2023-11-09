@@ -41,26 +41,27 @@
             
             <div class="col-md-5 my-5">
               <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                @if($article->images)
+                @if(count($article->images))
                 <div class="carousel-inner rounded-4 shadow-lg">
                   @foreach ($article->images as $image)
                   <div class="carousel-item @if($loop->first) active @endif" data-bs-interval="10000">
-                    <img src="{{Storage::url($image->path)}}" class="d-block w-100" alt="...">
+                    <img src="{{Storage::url($image->path)}}" class="d-block w-100 imgCarousel" alt="...">
                   </div>  
                   @endforeach
                 </div>
-                @elseif(!$article->images)
-                <div class="carousel-inner"> 
+                @else
+                <div class="carousel-inner rounded-4 shadow-lg "> 
+                  
                   <div class="carousel-item active" data-bs-interval="2000">
-                    <img src="https://picsum.photos/500" class="img-fluid w-100" alt="...">
+                    <img src="https://picsum.photos/500" class="img-fluid w-100 imgCarousel " alt="...">
                   </div>
 
                   <div class="carousel-item" data-bs-interval="2000">
-                    <img src="https://picsum.photos/501" class="img-fluid w-100" alt="...">
+                    <img src="https://picsum.photos/501" class="img-fluid w-100 imgCarousel " alt="...">
                   </div>
 
                   <div class="carousel-item">
-                    <img src="https://picsum.photos/502" class="img-fluid w-100" alt="...">
+                    <img src="https://picsum.photos/502" class="img-fluid w-100 imgCarousel" alt="...">
                   </div>
                 </div>
                 @endif 
