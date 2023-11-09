@@ -14,6 +14,7 @@ class CreateForm extends Component
 {
     use WithFileUploads;
     
+    public $image;
     public $article;
     public $images = [];
     public $temporary_images;
@@ -50,7 +51,7 @@ class CreateForm extends Component
     
     public function updatedTemporaryImages(){
         if($this->validate([
-            'temporary_images.*'=>'image'
+            'temporary_images.*'=>'image|max:1024'
             ])) {
                 foreach($this->temporary_images as $image){
                     $this->images[]= $image;
@@ -81,7 +82,7 @@ class CreateForm extends Component
                     $newFileName = "articles/{$article->id}";
                     $newImage = $article->images()->create(['path'=>$image->store($newFileName,'public')]);
                     
-                    dispatch(new ResizeImage($newImage->path, 300, 300));
+                    dispatch(new ResizeImage($newImage->path, 300, 300),);
                 }
 
                 File::deleteDirectory(storage_path('/app/livewire-tmp'));
