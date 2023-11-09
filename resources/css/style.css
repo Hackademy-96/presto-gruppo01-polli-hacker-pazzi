@@ -59,12 +59,16 @@
     background-color: var(--color-B) ;
 }
 
+/* ? div per altezza */
+.divAltezza{
+    height: 20vh;
+}
+/* ? div per altezza */
+
 /* ? inizio footer */
 .footer {
     background-color: var(--color-B);
     color: var(--color-W);
-    
-    padding: 10px 0;
 }
 .social-links a {
     color: var(--color-W);
@@ -100,7 +104,9 @@ body{
 
     margin: 0; /* Rimuove il margine predefinito del corpo */
     padding: 0; /* Rimuove il riempimento predefinito del corpo */
-    height: 100%; /* Imposta l'altezza del corpo su 100% dell'altezza del viewport */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Imposta l'altezza del corpo su 100% dell'altezza del viewport */
     background-repeat: no-repeat;
     background-size: cover;
     position: relative; /* Imposta la posizione su relativa in modo che il pseudo-elemento possa essere posizionato in base a esso */

@@ -1,11 +1,11 @@
 <x-layout>
-  <section class="h-100 bg-dark">
-    <div class="container py-5 h-100">
+  <section class="h-100 bgS mt-5 shadow">
+    <div class="container py-5 h-100 ">
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col">
-          <div class="card card-registration my-4">
+          <div class="card card-registration my-4 border border-0">
             <div class="row g-0">
-              <div class="col-xl-6 d-none d-xl-block">
+              <div class="col-xl-6 d-none d-xl-block ">
                 <img src="https://picsum.photos/700"
                 alt="Sample photo" class="img-fluid"
                 style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;" />
@@ -22,7 +22,7 @@
                     </ul>
                   </div>
                   @endif
-                  <form method="POST" action="/register">
+                  <form class="" method="POST" action="/register">
                     @csrf                    
                     <div class="row">
                       <div class="col-md-6 mb-4">
@@ -129,5 +129,6 @@
         </div>
       </div>
     </div>
+    <div class="divAltezza"></div>
   </section>
 </x-layout>
