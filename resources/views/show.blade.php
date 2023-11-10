@@ -2,7 +2,7 @@
   <div class="container mt-100">
     <div class="row justify-content-center ">
       <div class="col-12 display-2 text-center p-3 titleShow mb-5">
-        <h1 class="display-1 colorP ">Stai guardando {{$article->title}}!</h1>
+        <h1 class="display-1 colorP ">{{__('ui.showTitolo')}} {{$article->title}}!</h1>
       </div>
       <div class="container mb-5">
         <div class="row justify-content-around bgE rounded-4">
@@ -10,11 +10,11 @@
           <div class="ms-1 col-md-5 align-self-center mt-4">
             <h3>{{$article->title}}</h3>
             <h5 class="colorC">{{$article->category->name}}</h5>
-            <p><i class="far fa-clock"></i><small> Caricato il: {{$article->created_at->format('d/m/Y')}} </small></p>
-            <p>Da: {{$article->user->name}}</p>
-            <h5 class="mt-2 colorD fw-bold">Descrizione:</h5>
+            <p><i class="far fa-clock"></i><small> {{__('ui.showData')}} {{$article->created_at->format('d/m/Y')}} </small></p>
+            <p>{{__('ui.showDa')}} {{$article->user->name}}</p>
+            <h5 class="mt-2 colorD fw-bold">{{__('ui.showDesc')}}</h5>
             <p>{{$article->description}}</p>
-            <h5 class="mt-2 colorD  fw-bold">Prezzo:</h5>
+            <h5 class="mt-2 colorD  fw-bold">{{__('ui.showPrez')}}</h5>
             <p>{{$article->price}} €</p>
             
             {{-- @if(Auth::user() && $movie->user->id == Auth::user()->id)

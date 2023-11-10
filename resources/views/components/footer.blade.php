@@ -39,7 +39,7 @@
       <!-- Section: Text -->
       <section class="mb-4">
         <p>
-          <strong>- Polli Hacker Pazzi! -</strong>
+          <strong>{{__('ui.nome')}}</strong>
         </p>
       </section>
       <!-- Section: Text -->
@@ -56,7 +56,7 @@
             <i class="fas fa-gem me-3"></i>Presto
           </h6>
           <p>
-            Siamo un gruppo di junior web developer e abbiamo sviluppato questo sito da zero, dal back-end al front-end, speriamo vi possa piacere buona permaneza!
+            {{__('ui.footerDesc')}}
           </p>
         </div>
         <!-- Grid column -->
@@ -65,7 +65,7 @@
         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
           <!-- Links -->
           <h6 class="text-uppercase fw-bold mb-4">
-            Team 
+            {{__('ui.team')}}
           </h6>
           <p>
             <a href="#!" class="text-reset">Margherita Bombi</a>
@@ -92,10 +92,13 @@
             Presto.it
           </h6>
           <p>
-            Lavora con noi 
+            {{__('ui.teamWork')}}
+
           </p>
           <p>
-            <a href="{{route('become.revisor')}}" class="text-reset btn bgA">Diventa Revisore</a>
+            <a href="{{route('become.revisor')}}" class="text-reset btn bgA">
+              {{__('ui.rev')}}
+            </a>
           </p>
         </div>
         <!-- Grid column -->

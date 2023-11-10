@@ -21,7 +21,7 @@
         </div>
     </div>
     <div class="container mt-5">
-        <h1 class="text-center mb-5">Ecco gli ultimi Articoli:</h1>
+        <h1 class="text-center mb-5">{{__('ui.weArticoli')}}</h1>
         <div class="row">
             @foreach ($lastArticles as $article)
                 
@@ -31,7 +31,7 @@
                     <div class="inner">
                         <div class="main-img position-relative"><img src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(300, 300) : 'https://picsum.photos/300'}}" alt="Category">
                             <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bgC">
-                                Nuovo
+                                {{__('ui.wePill')}}
                                 <span class="visually-hidden"></span>
                               </span>
                         </div>
@@ -40,7 +40,7 @@
                     </div></a>
                     <div class="card-body text-center">
                         <h4 class="card-title">{{$article->title}}</h4>
-                       <a class="btn bgA btn-sm" href="{{route('article_show', compact('article'))}}">Vai al dettaglio</a>
+                       <a class="btn bgA btn-sm" href="{{route('article_show', compact('article'))}}">{{__('ui.weDett')}}</a>
                     </div>
                 </div>
             </div>

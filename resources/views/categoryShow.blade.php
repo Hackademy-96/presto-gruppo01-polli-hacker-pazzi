@@ -2,7 +2,7 @@
     <div class="container-fluid mt-5 bgS">
         <div class="row">
             <div class="col-12 text-center my-5">
-                <h3>Guarda tutti gli articoli in</h3>
+                <h3>{{__('ui.catTitolo')}}</h3>
                 <h2 class="colorP">{{$category->name}}</h2>
             </div>
             {{-- {{$article->category_id == $category->id ? 'Ecco l\'annuncio da revisionare' : 'Non ci sono annunci da revisionare'}} --}}
@@ -17,7 +17,7 @@
                     <div class="card-body text-center">
                         <h4 class="card-title">{{$article->title}}</h4>
                         <p class="text-muted">{{$article->description}}</p>
-                        <p class="text-muted">{{$article->price}}</p><a class="btn bgA btn-sm" href="{{route('article_show', compact('article'))}}" >Vai al dettaglio</a>
+                        <p class="text-muted">{{$article->price}}</p><a class="btn bgA btn-sm" href="{{route('article_show', compact('article'))}}" >{{__('ui.weDett')}}</a>
                     </div>
                 </div>
             </div>

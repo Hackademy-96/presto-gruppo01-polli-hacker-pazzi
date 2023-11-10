@@ -2,7 +2,7 @@
 
 return[
     // ? navbar
-    'categorie'=>'#Categorie',
+    'categorie'=>'Categorie',
     '#Abbigliamento'=>'#Abbigliamento',
     '#Animali'=>'#Animali',
     '#Antiquariato'=>'#Antiquariato',
@@ -22,7 +22,7 @@ return[
     'saluto'=>'Ciao',
     'logOut'=>'Esci',
     'cerca'=>'Cerca',
-    
+
     // ? header
     'slogan'=>'Compra,Vendi Presto Presto',
     'vaiArticoli'=>'Vai agli articoli',
