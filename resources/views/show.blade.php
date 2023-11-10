@@ -10,11 +10,10 @@
           <div class="ms-1 col-md-5 align-self-center mt-4">
             <h3>{{$article->title}}</h3>
             <h5 class="colorC">{{$article->category->name}}</h5>
-            <small><i class="far fa-clock"></i> {{$article->created_at}}</small>
-            <p><small>Caricato il: {{$article->created_at->format('d/m/Y')}} </small></p>
+            <p><i class="far fa-clock"></i><small> Caricato il: {{$article->created_at->format('d/m/Y')}} </small></p>
             <p>Da: {{$article->user->name}}</p>
             <h5 class="mt-2 colorD fw-bold">Descrizione:</h5>
-            <p>{{$article->description}} Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quam inventore, illum sapiente a debitis delectus sed neque aspernatur provident illo, cum, minima fugiat. Dolore voluptates mollitia voluptate inventore asperiores!</p>
+            <p>{{$article->description}}</p>
             <h5 class="mt-2 colorD  fw-bold">Prezzo:</h5>
             <p>{{$article->price}} €</p>
             

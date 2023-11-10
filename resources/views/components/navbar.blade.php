@@ -29,12 +29,12 @@
                 
                 <div class="nav-item dropdown">
                     <a class="nav-link navlink dropdown-toggle text-white text-start" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fa-solid fa-hashtag"></i> Categorie
+                        <i class="fa-solid fa-hashtag"></i>{{__('ui.categorie')}}
                     </a>
                     
                     <ul class="dropdown-menu">
                         @foreach($categories as $category)
-                        <li><a class="dropdown-item" href="{{route('categoryShow', compact('category'))}}">{{$category->name}}</a></li>
+                        <li><a class="dropdown-item" href="{{route('categoryShow', compact('category'))}}">{{__("ui.$category->name")}}</a></li>
                         @endforeach
                     </ul>
                 </div>

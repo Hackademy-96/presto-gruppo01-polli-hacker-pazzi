@@ -56,8 +56,7 @@
             <i class="fas fa-gem me-3"></i>Presto
           </h6>
           <p>
-            Here you can use rows and columns to organize your footer content. Lorem ipsum
-            dolor sit amet, consectetur adipisicing elit.
+            Siamo un gruppo di junior web developer e abbiamo sviluppato questo sito da zero, dal back-end al front-end, speriamo vi possa piacere buona permaneza!
           </p>
         </div>
         <!-- Grid column -->
@@ -66,7 +65,7 @@
         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
           <!-- Links -->
           <h6 class="text-uppercase fw-bold mb-4">
-            Team PHP
+            Team 
           </h6>
           <p>
             <a href="#!" class="text-reset">Margherita Bombi</a>
@@ -94,10 +93,6 @@
           </h6>
           <p>
             Lavora con noi 
-          </p>
-         
-          <p>
-            Registrati e clicca qui!
           </p>
           <p>
             <a href="{{route('become.revisor')}}" class="text-reset btn bgA">Diventa Revisore</a>
