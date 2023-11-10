@@ -9,7 +9,7 @@
             class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;"
             alt="Sample photo">
             <div class="card-body p-4 p-md-5">
-              <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Crea il tuo articolo!</h3>
+              <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">{{__('ui.aggArticoli')}}</h3>
               @if ($errors->any())
               <div class="alert alert-danger mb-0">
                 <ul>
@@ -26,19 +26,19 @@
                 
                 <div class="form-outline mb-4">
                   <input wire:model.live='title' type="text" id="title" class="form-control @error('title') is-invalid @enderror"  />
-                  <label class="form-label" for="title">Titolo</label>
+                  <label class="form-label" for="title">{{__('ui.creTitolo')}}</label>
                 </div>
                 
                 <div class="form-floating">
-                  <textarea wire:model.live='description' class="form-control @error('description') is-invalid @enderror" placeholder="Leave a description here" id="floatingTextarea" style="height: 100px">Descrizione</textarea>
-                  <label for="floatingTextarea">Aggiungi la descrizione del tuo articolo</label>
+                  <textarea wire:model.live='description' class="form-control @error('description') is-invalid @enderror" placeholder="Leave a description here" id="floatingTextarea" style="height: 100px">{{__('ui.creDesc')}}</textarea>
+                  <label for="floatingTextarea">{{__('ui.crePlace')}}</label>
                 </div>
-                <label for="floatingTextarea">Descrizione</label>
+                <label for="floatingTextarea">{{__('ui.creDesc')}}</label>
                 <div class="row">
                   <div class="col-md-6 mb-4 mt-4">
                     <div class="form-outline datepicker">
                       <input wire:model.live='price' type="longtext" class="form-control @error('price') is-invalid @enderror" id="price" />
-                      <label for="price" class="form-label">Prezzo</label>
+                      <label for="price" class="form-label">{{__('ui.crePrez')}}</label>
                     </div>
                     
                   </div>
@@ -49,7 +49,7 @@
                     <div class="form-check col-6">
                       <input wire:model.live.defer="category_id" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked value="{{$category->id}}" >
                       <label class="form-check-label" for="flexRadioDefault2">
-                        {{$category->name}}
+                        {{__("ui.$category->name")}}
                       </label>
                     </div>
                     @endforeach
@@ -72,14 +72,14 @@
                       <div class="col">
                         <div class="img-preview mx-auto shadow rounded"  style="background-image: url({{$image->temporaryUrl()}}); background-position:center;">
                         </div>
-                        <button type="button" class="btn bgA shadow d-block text-center my-4 mx-auto" wire:click="removeImage({{$key}})">Cancella</button>
+                        <button type="button" class="btn bgA shadow d-block text-center my-4 mx-auto" wire:click="removeImage({{$key}})">{{__('ui.creBot1')}}</button>
                     </div>
                     @endforeach
                   </div>
                 </div>
               </div>
               @endif
-              <button type="submit" class="btn bgA btn-lg mt-5 mb-1">Submit</button>
+              <button type="submit" class="btn bgA btn-lg mt-5 mb-1">{{__('ui.creBot2')}}</button>
             
               
             </form>

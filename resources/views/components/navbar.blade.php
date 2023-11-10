@@ -80,15 +80,12 @@
                     @endauth
                 </ul>
             </ul>
-            <ul>
-                <li><x-_locale lang="it" /></li>
-            </ul>
-            <ul>
-                 <li><x-_locale lang="en" /></li>
-            </ul>
-            <ul>
-                <li><x-_locale lang="es" /></li>
-            </ul>
+            <span class="d-flex p-0">
+                <span class="nav-item p-0"><x-_locale lang="it" /></span>
+                <span class="nav-item p-0"><x-_locale lang="en" /></span>
+                <span class="nav-item p-0"><x-_locale lang="es" /></span>
+            </span>
+            
             <form action="{{route('articles.search')}}" method="GET" class="d-flex" role="search">
                 <input name="searched" class="form-control me-2" type="search" placeholder="{{__('ui.cerca')}}" aria-label="Search">
                 <button class="btn bgS colorD" type="submit">{{__('ui.cerca')}}</button>

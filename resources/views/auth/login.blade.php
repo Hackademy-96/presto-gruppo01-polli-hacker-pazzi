@@ -12,7 +12,7 @@
                             </div>
                             <div class="col-xl-6">
                                 <div class="card-body p-md-5 text-black text-center">
-                                    <h3 class="mb-5 text-uppercase colorC">Bentornato!</h3>
+                                    <h3 class="mb-5 text-uppercase colorC">{{__('ui.logTitolo')}}</h3>
                                     @if ($errors->any())
                                     <div class="alert alert-danger">
                                         <ul>
@@ -105,12 +105,12 @@
                                         
                                         <div class="d-flex justify-content-around pt-3 mb-5">
                                             {{-- <button type="button" class="btn btn-light btn-lg">Reset all</button> --}}
-                                            <button type="submit" class="btn bgA btn-lg ms-2">Accedi</button>
+                                            <button type="submit" class="btn bgA btn-lg ms-2">{{__('ui.accedi')}}</button>
                                         </div>
                                         <div >
-                                            <p>Se non hai un account </p>
+                                            <p>{{__('ui.logParaf')}}</p>
                                             
-                                            <a href="{{route('register')}}" type="button" class="btn bgC btn-lg ms-2">Registrati</a>
+                                            <a href="{{route('register')}}" type="button" class="btn bgC btn-lg ms-2">{{__('ui.registrati')}}</a>
                                         </div>
                                         
                                     </form>

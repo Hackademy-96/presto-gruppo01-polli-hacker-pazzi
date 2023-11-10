@@ -3,7 +3,11 @@
         <div class="row mt-5">
             <div class="col-12 mt-5">
                 <h1 class="text-center">
-                    {{$article_to_check ? 'Ecco l\'annuncio da revisionare' : 'Non ci sono annunci da revisionare'}}
+                    @if($article_to_check)
+                    {{__('ui.rev1')}}
+                    @else
+                    {{__('ui.rev2')}}
+                    @endif
 
                 </h1>
             </div>
@@ -70,7 +74,7 @@
                 <form action="{{route('revisor.accept_article', ['article'=>$article_to_check])}}" method="POST">
                     @csrf
                     @method('PATCH')
-                    <button class="btn bgA btn-lg" type="submit">Accetta</button>
+                    <button class="btn bgA btn-lg" type="submit">{{__('ui.revsi')}}</button>
                 </form>
             </div>
             
@@ -78,7 +82,7 @@
                 <form action="{{route('revisor.reject_article', ['article'=>$article_to_check])}}" method="POST">
                     @csrf
                     @method('PATCH')
-                    <button class="btn bgC btn-lg" type="submit">Rifiuta</button>
+                    <button class="btn bgC btn-lg" type="submit">{{__('ui.revno')}}</button>
                 </form>
 
             </div>

@@ -12,7 +12,7 @@
               </div>
               <div class="col-xl-6">
                 <div class="card-body p-md-5 text-black">
-                  <h3 class="mb-5 text-uppercase colorC">Registrati </h3>
+                  <h3 class="mb-5 text-uppercase colorC">{{__('ui.registrati')}}</h3>
                   @if ($errors->any())
                   <div class="alert alert-danger">
                     <ul>
@@ -28,7 +28,7 @@
                       <div class="col-md-6 mb-4">
                         <div class="form-outline">
                           <input name="name" type="text" id="name" class="form-control form-control-lg" />
-                          <label class="form-label" for="name">Username</label>
+                          <label class="form-label" for="name">{{__('ui.reName')}}</label>
                         </div>
                       </div>
                       <div class="col-md-6 mb-4">
@@ -45,7 +45,7 @@
                     </div>
                     <div class="form-outline mb-4">
                       <input name="password_confirmation" type="password" id="password_confirmation" class="form-control form-control-lg" />
-                      <label class="form-label" for="password_confirmation">Conferma Password</label>
+                      <label class="form-label" for="password_confirmation">{{__('ui.reConfirm')}}</label>
                     </div>
                     
                     {{-- <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
@@ -117,7 +117,7 @@
                     
                     <div class="d-flex justify-content-end pt-3">
                       {{-- <button type="button" class="btn btn-light btn-lg">Reset all</button> --}}
-                      <button type="submit" class="btn bgA btn-lg ms-2">Invia</button>
+                      <button type="submit" class="btn bgA btn-lg ms-2">{{__('ui.reBot')}}</button>
                     </div>
                     
                   </form>

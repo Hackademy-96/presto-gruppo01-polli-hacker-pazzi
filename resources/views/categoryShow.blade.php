@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-12 text-center my-5">
                 <h3>{{__('ui.catTitolo')}}</h3>
-                <h2 class="colorP">{{$category->name}}</h2>
+                <h2 class="colorP">{{__("ui.$category->name")}}</h2>
             </div>
             {{-- {{$article->category_id == $category->id ? 'Ecco l\'annuncio da revisionare' : 'Non ci sono annunci da revisionare'}} --}}
             @forelse ($articles as $article)

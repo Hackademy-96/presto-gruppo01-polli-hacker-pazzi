@@ -3,7 +3,7 @@
         
         <div class="row">
             <div class="col-12 text-center mb-5">
-                <h1 class="display-1 colorP">Tutti gli articoli</h1>
+                <h1 class="display-1 colorP">{{__('ui.tuttiArticoli')}}</h1>
             </div>
             @forelse ($articles as $article)
             <div class="col-md-4 col-sm-6 mb-5">
@@ -16,7 +16,7 @@
                         <h4 class="card-title">{{$article->title}}</h4>
                         <p class="text-muted">{{$article->description}}...</p>
                         <p class="text-muted">{{$article->price}} €</p>
-                        <a class="btn bgA btn-sm" href="{{route('article_show', compact('article'))}}" >Vai al dettaglio</a>
+                        <a class="btn bgA btn-sm" href="{{route('article_show', compact('article'))}}">{{__('ui.weDett')}}</a>
                     </div>
                 </div>
             </div>
