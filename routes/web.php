@@ -23,6 +23,8 @@ Route::get('/article.index',[ArticleController::class , 'index'])->name('article
 Route::get('/category.show/{category}',[ArticleController::class , 'categoryShow'])->name('categoryShow');
 
 Route::get('/articles.search',[PublicController::class , 'searchArticles'])->name('articles.search');
+Route::post('/lingua/{lang}' , [PublicController::class, 'setLanguage'])->name('setLocale');
+
 
 Route::get('/revisor/home',[RevisorController::class , 'index'])->middleware('isRevisor')->name('revisor.index');
 Route::patch('/accept/article/{article}',[RevisorController::class , 'acceptArticle'])->middleware('isRevisor')->name('revisor.accept_article');
@@ -32,6 +34,5 @@ Route::patch('/reject/article/{article}',[RevisorController::class , 'rejectArti
 Route::get('/richiesta/revisore',[RevisorController::class , 'becomeRevisor'])->middleware('auth')->name('become.revisor');
 Route::post('/becomerevisor/submit',[RevisorController::class,'submit'])->middleware('auth')->name('becomerevisor.submit');
 Route::get('/rendi/revisore{email}',[RevisorController::class , 'makeRevisor'])->name('make.revisor');
-
 
 

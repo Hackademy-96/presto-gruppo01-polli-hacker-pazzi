@@ -80,6 +80,15 @@
                     @endauth
                 </ul>
             </ul>
+            <ul>
+                <li><x-_locale lang="it" /></li>
+            </ul>
+            <ul>
+                 <li><x-_locale lang="en" /></li>
+            </ul>
+            <ul>
+                <li><x-_locale lang="es" /></li>
+            </ul>
             <form action="{{route('articles.search')}}" method="GET" class="d-flex" role="search">
                 <input name="searched" class="form-control me-2" type="search" placeholder="Cerca" aria-label="Search">
                 <button class="btn bgS colorD" type="submit">Cerca</button>
