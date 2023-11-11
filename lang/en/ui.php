@@ -115,6 +115,7 @@ return[
     // ? index
     // 'tuttiArticoli'=>'Tutti gli articoli',
     // 'weDett'=>'Vai al dettaglio',
-    'messNoArt' => 'There are no articles'
+    'messNoArt' => 'There are no articles',
 
+ 
 ];

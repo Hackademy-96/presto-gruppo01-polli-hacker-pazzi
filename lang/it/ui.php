@@ -117,4 +117,6 @@ return[
     // 'weDett'=>'Vai al dettaglio',
     'messNoArt' => 'Non ci sono articoli',
 
+
+
 ];
