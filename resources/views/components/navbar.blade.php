@@ -1,4 +1,4 @@
-<nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top py-2 px-3 transition">
+<nav id="navbar" class="navbar navbar-expand-xxl navbar-light bg-light shadow fixed-top py-2 px-3 transition">
     <div class="container-fluid">
         <a class="navbar-brand text-white" href="/">
             <img src="https://companieslogo.com/img/orig/PRST_BIG.D-3cd298b6.png?t=1687683317" width=100px alt="">

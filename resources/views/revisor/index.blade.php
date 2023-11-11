@@ -1,25 +1,26 @@
 <x-layout>
-  <div class="containner mt-5">
-    <div class="row align-items-end mt-5 text-center">
-      <div class="col-6">
-        <h1 class="display-3">Bentornato {{Auth::user()->name}}</h1>
+  <div class="container-fluid mt-5">
+    
+    <div class="row  mt-5 justify-content-evenly">
+      <div class="col-12">
+        <h1 class="display-2 text-center mt-2 colorP">Bentornato {{Auth::user()->name}}</h1>
       </div>
-      <div class="col-6">
+      <div class="col-12 text-center mt-3">
         @if($article_to_check)
         {{-- {{__('ui.rev1')}} --}}
         <h2> Ci sono ancora {{App\Models\Article::toBeRevisionedCount()}} articoli da revisionare</h2>
         @else
         {{-- {{__('ui.rev2')}} --}}
-        <h2> Non ci sono articoli da revisionare </h2>
+        <h2 > Non ci sono articoli da revisionare </h2>
         @endif
         
       </div>
     </div>
   </div>
-  <div class="container">
+  <div class="container-fluid p-0">
     <div class="row mt-5">
-      <div class="col-6 mt-5">
-        <h1 class="text-center display-2">
+      <div class="col-12 ">
+        <h1 class="display-3 text-center colorP">
           @if($article_to_check)
           Prossimo Annuncio:
           @endif
@@ -29,12 +30,16 @@
     </div>
     @if ($article_to_check)
     
-    <div class="row justify-content-start  mt-5">
+    <div class="container-fluid mt-5 p-0">
+
+    
+    <div class="row justify-content-evenly">
+
       <div class="col-12 col-md-6">
-        <div class="card p-4 " style="width: 40rem;">
+        <div class="p-4">
           <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
             @if(count($article_to_check->images))
-            <div class="carousel-inner rounded-4 shadow-lg">
+            <div class="carousel-inner rounded-4 shadow-lg carouselSize">
               @foreach ($article_to_check->images as $image)
               <div class="carousel-item @if($loop->first) active @endif" data-bs-interval="10000">
                 <img src="{{Storage::url($image->path)}}" class="d-block w-100 imgCarousel" alt="...">
@@ -45,15 +50,15 @@
             <div class="carousel-inner rounded-4 shadow-lg "> 
               
               <div class="carousel-item active" data-bs-interval="2000">
-                <img src="https://picsum.photos/500" class="img-fluid w-100 imgCarousel " alt="...">
+                <img src="https://picsum.photos/500" class="d-block w-100 h-100 imgCarousel " alt="...">
               </div>
               
               <div class="carousel-item" data-bs-interval="2000">
-                <img src="https://picsum.photos/501" class="img-fluid w-100 imgCarousel " alt="...">
+                <img src="https://picsum.photos/501" class="d-block w-100 h-100 imgCarousel " alt="...">
               </div>
               
               <div class="carousel-item">
-                <img src="https://picsum.photos/502" class="img-fluid w-100 imgCarousel" alt="...">
+                <img src="https://picsum.photos/502" class="d-block w-100 h-100 imgCarousel" alt="...">
               </div>
             </div>
             @endif 
@@ -68,7 +73,8 @@
           </div>
         </div>
       </div>
-      <div class="col-12 col-md-6">
+
+      <div class="col-12 col-md-6 col-sm-12">
         <div class="card-body ms-5 ps-5">
           <h2 class="card-title mb-5">Caricato dall'utente : <span class="colorC">{{$article_to_check->user->name}}</span></h2>
           <h3 class="card-text colorP">Titolo :</h3>
@@ -77,11 +83,12 @@
           <p class="fs-5">{{$article_to_check->category->name}}</p>
           <h3 class="card-text colorP">Descrizione :</h3>
           <p class="fs-5">{{$article_to_check->description}}</p>
-          <h3 class="card-text colorP"></h3>
+          <h3 class="card-text colorP">Prezzo</h3>
           <p class="fs-5">{{$article_to_check->price}} €</p>
           <h3 class="card-text colorP">Data creazione :</h3>
           <p class="fs-5">{{$article_to_check->created_at->format('d/m/Y')}}</p>
-          <div class="d-flex justify-content-around my-5">
+
+          <div class="d-flex justify-content-start  my-5">
             <form action="{{route('revisor.accept_article', ['article'=>$article_to_check])}}" method="POST">
               @csrf
               @method('PATCH')
@@ -90,11 +97,13 @@
             <form action="{{route('revisor.reject_article', ['article'=>$article_to_check])}}" method="POST">
               @csrf
               @method('PATCH')
-              <button class="btn bgC btn-lg" type="submit">{{__('ui.revno')}}</button>
+              <button class="btn bgC btn-lg ms-2 " type="submit">{{__('ui.revno')}}</button>
             </form>
           </div>
         </div>
       </div>
+
+    </div>
     </div>
   </div>
   @endif

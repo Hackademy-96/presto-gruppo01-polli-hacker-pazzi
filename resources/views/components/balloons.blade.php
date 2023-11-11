@@ -69,7 +69,10 @@
                 <a href="{{('category.show/8')}}" class="about-btn">{{__('ui.bottBall')}}</a>
               </div>
             </div>
+           
+            <div class="row justify-content-center">
 
+            
             <div class="col-md-3">
               <div class="icon-box"> <i class="fa-solid fa-headphones navlink shadow" aria-hidden="true"></i>
                 <h5>{{__('ui.cat9Ball')}}</h5>
@@ -84,7 +87,7 @@
               </div>
             </div>
 
-
+            </div>
             
           </div>
            </div>

@@ -364,4 +364,8 @@ img{
     margin: 0 auto; /* Per centrare le card orizzontalmente */
     }
 
+    .logoHeader{
+        width: 300px;
+    }
+
 }
