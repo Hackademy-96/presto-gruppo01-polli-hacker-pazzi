@@ -51,6 +51,19 @@
                         <i class="fa-solid fa-pen-to-square"></i> {{__('ui.aggArticoli')}}
                     </a>
                 </li>
+                
+                <li class="nav-item dropdown">
+                    <a class="nav-link navlink active dropdown-toggle fw-bold nav-text-custom" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-user"></i> {{__('ui.saluto')}} {{Auth::user()->name}}</a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item">
+                            <form method="POST" action="{{route('logout')}}">
+                                @csrf
+                                <button class="nav-link active" type="submit">{{__('ui.logOut')}}</button>
+                            </form>
+                        </li>
+                    </ul>
+                </li> 
+                
                 @if (Auth::user()->is_revisor)
                 <li class="nav-item">
                     <a class="nav-link navlink text-white position-relative" href="{{route('revisor.index')}}">
@@ -65,20 +78,8 @@
                     </a>
                 </li>
                 @endif
-                
-                <li class="nav-item dropdown">
-                    <a class="nav-link navlink active dropdown-toggle fw-bold nav-text-custom" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-user"></i> {{__('ui.saluto')}} {{Auth::user()->name}}</a>
-                    <ul class="dropdown-menu">
-                        <li class="dropdown-item">
-                            <form method="POST" action="{{route('logout')}}">
-                                @csrf
-                                <button class="nav-link active" type="submit">{{__('ui.logOut')}}</button>
-                            </form>
-                        </li>
-                    </li>        
                     
-                    @endauth
-                </ul>
+                @endauth
             </ul>
             <span class="d-flex p-0">
                 <span class="nav-item p-0"><x-_locale lang="it" /></span>

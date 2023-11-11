@@ -50,7 +50,7 @@
             </div>
 
             <div class="col-md-3">
-              <div class="icon-box"> <i class="fa-solid fa-futbol navlink shadow" aria-hidden="true"></i>
+              <div class="icon-box text-center"> <i class=" fa-solid fa-puzzle-piece navlink shadow" aria-hidden="true"></i>
                 <h5>{{__('ui.cat6Ball')}}</h5>
                 <a href="{{('category.show/6')}}" class="about-btn">{{__('ui.bottBall')}}</a>
               </div>

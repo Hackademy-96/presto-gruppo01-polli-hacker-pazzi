@@ -96,9 +96,20 @@
 
           </p>
           <p>
+            @guest
             <a href="{{route('become.revisor')}}" class="text-reset btn bgA">
               {{__('ui.rev')}}
-            </a>
+            </a>     
+            @endguest
+            @auth
+            @if (!Auth::user()->is_revisor)
+            <a href="{{route('become.revisor')}}" class="text-reset btn bgA">
+              {{__('ui.rev')}}
+            </a>     
+            @endif
+                
+            @endauth
+            
           </p>
         </div>
         <!-- Grid column -->

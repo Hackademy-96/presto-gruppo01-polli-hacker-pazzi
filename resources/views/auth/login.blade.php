@@ -1,12 +1,12 @@
 <x-layout>
-    <section class="h-100 bgS mt-5">
-        <div class="container py-5 h-100">
+    <section class="h-100 bgS ">
+        <div class="container py-5 h-100 mt-5">
             <div class="row d-flex justify-content-center align-items-center h-100">
-                <div class="col">
+                <div class="col-12">
                     <div class="card card-registration my-4 border border-0">
-                        <div class="row g-0">
-                            <div class="col-xl-6 d-none d-xl-block">
-                                <img src="https://picsum.photos/800/900"
+                        <div class="row g-0 justify-content-between ">
+                            <div class="col-xl-5 d-none d-xl-block">
+                                <img src="./media/login.jpg"
                                 alt="Sample photo" class="img-fluid"
                                 style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;" />
                             </div>

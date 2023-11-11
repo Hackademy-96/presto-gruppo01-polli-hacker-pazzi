@@ -5,7 +5,7 @@
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col-md-8 col-lg-8">
           <div class="card rounded-3 border border-0">
-            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img3.webp"
+            <img src="./media/create-form.jpg"
             class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;"
             alt="Sample photo">
             <div class="card-body p-4 p-md-5">
@@ -72,7 +72,7 @@
                       <div class="col">
                         <div class="img-preview mx-auto shadow rounded"  style="background-image: url({{$image->temporaryUrl()}}); background-position:center;">
                         </div>
-                        <button type="button" class="btn bgA shadow d-block text-center my-4 mx-auto" wire:click="removeImage({{$key}})">{{__('ui.creBot1')}}</button>
+                        <button type="button" class="btn bgC shadow d-block text-center my-4 mx-auto" wire:click="removeImage({{$key}})">{{__('ui.creBot1')}}</button>
                     </div>
                     @endforeach
                   </div>

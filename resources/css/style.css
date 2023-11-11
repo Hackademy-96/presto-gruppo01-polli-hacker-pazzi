@@ -335,10 +335,18 @@ img{
     width: fit-content;
     height: fit-content;
 }
-
+.carosello {
+    width: 100%; /* Assicura che il carosello si adatti alla larghezza del contenitore */
+}
+.slideC {
+    position: relative;
+    height: 500px; /* Imposta l'altezza desiderata */
+    overflow: hidden;
+}
 .imgCarousel{
-    
-    height: 500px;
+    width: 100%;
+    height: 100%;
+
 }
 
 /* ? inizio media query */
