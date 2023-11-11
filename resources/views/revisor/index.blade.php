@@ -3,15 +3,15 @@
     
     <div class="row  mt-5 justify-content-evenly">
       <div class="col-12">
-        <h1 class="display-2 text-center mt-2 colorP">Bentornato {{Auth::user()->name}}</h1>
+        <h1 class="display-2 text-center mt-2 colorP">{{__('ui.logTitolo')}} {{Auth::user()->name}}</h1>
       </div>
       <div class="col-12 text-center mt-3">
         @if($article_to_check)
         {{-- {{__('ui.rev1')}} --}}
-        <h2> Ci sono ancora {{App\Models\Article::toBeRevisionedCount()}} articoli da revisionare</h2>
+        <h2> {{__('ui.ciSonoAncora')}} {{App\Models\Article::toBeRevisionedCount()}} {{__('ui.articoliDaRevisionare')}}</h2>
         @else
         {{-- {{__('ui.rev2')}} --}}
-        <h2 > Non ci sono articoli da revisionare </h2>
+        <h2 > {{__('ui.rev2')}} </h2>
         @endif
         
       </div>
@@ -22,7 +22,7 @@
       <div class="col-12 ">
         <h1 class="display-3 text-center colorP">
           @if($article_to_check)
-          Prossimo Annuncio:
+          {{__('ui.prossArt')}}
           @endif
           
         </h1>
@@ -31,8 +31,8 @@
     @if ($article_to_check)
     
     <div class="container-fluid mt-5 p-0">
-      <div class="row">
-        <div class="col-12 col-md-6">
+      <div class="row d-flex justify-content-center">
+        <div class="col-8 col-md-4 ">
           <div>
             <div id="carouselExampleInterval" class="carousel carosello slide" data-bs-ride="carousel">
               @if(count($article_to_check->images))
@@ -71,18 +71,18 @@
           </div>
         </div>
         
-        <div class="col-12 col-md-6 col-sm-12">
+        <div class="col-8 col-md-4 col-sm-8">
           <div class="card-body ms-5 ps-5">
-            <h2 class="card-title mb-5">Caricato dall'utente : <span class="colorC">{{$article_to_check->user->name}}</span></h2>
-            <h3 class="card-text colorP">Titolo :</h3>
+            <h2 class="card-title mb-5">{{__('ui.caricatoUtente')}} <span class="colorC">{{$article_to_check->user->name}}</span></h2>
+            <h3 class="card-text colorP">{{__('ui.revTito')}}</h3>
             <p class="fs-5">{{$article_to_check->title}}</p>
-            <h3 class="card-text colorP">Categoria :</h3>
+            <h3 class="card-text colorP">{{__('ui.cateRev')}}</h3>
             <p class="fs-5">{{$article_to_check->category->name}}</p>
-            <h3 class="card-text colorP">Descrizione :</h3>
+            <h3 class="card-text colorP">{{__('ui.showDesc')}}</h3>
             <p class="fs-5">{{$article_to_check->description}}</p>
-            <h3 class="card-text colorP">Prezzo</h3>
+            <h3 class="card-text colorP">{{__('ui.showPrez')}}</h3>
             <p class="fs-5">{{$article_to_check->price}} €</p>
-            <h3 class="card-text colorP">Data creazione :</h3>
+            <h3 class="card-text colorP">{{__('ui.showData')}}</h3>
             <p class="fs-5">{{$article_to_check->created_at->format('d/m/Y')}}</p>
             
             <div class="d-flex justify-content-start  my-5">

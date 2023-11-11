@@ -74,6 +74,12 @@ return[
     'rev2'=>"Non ci sono annunci da revisionare",
     'revsi'=>"Accetta",
     'revno'=>"Rifiuta",
+    'ciSonoAncora' => 'Ci sono ancora',
+    'articoliDaRevisionare' => 'articoli da revisionare',
+    'prossArt' => 'Prossimo Articolo:',
+    'caricatoUtente' => "Caricato dall'utente :",
+    'cateRev' => 'Categoria :',
+    'revTito' => 'Titolo :',
 
     // ? create-form
     // 'aggArticoli'=>'Crea il tuo articolo!',
@@ -109,5 +115,6 @@ return[
     // ? index
     // 'tuttiArticoli'=>'Tutti gli articoli',
     // 'weDett'=>'Vai al dettaglio',
+    'messNoArt' => 'Non ci sono articoli',
 
 ];

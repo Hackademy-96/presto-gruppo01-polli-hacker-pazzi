@@ -84,6 +84,12 @@ return[
     'rev2' => 'No hay anuncios que revisar.',
     'revsi' => 'Acepta',
     'revno' => 'Rechaza',
+    'ciSonoAncora' => 'Todavía hay',
+    'articoliDaRevisionare' => 'artículos para revisar',
+    'prossArt' => 'Siguiente Artículo:',
+    'caricatoUtente' => "Cargado por el usuario :",
+    'cateRev' => 'Categoría :',
+    'revTito' => 'Título :',
      // ? fine revindex
 
      // ? create-form
@@ -125,6 +131,7 @@ return[
 
     // *  'tuttiArticoli' => 'Todos los artículos',
      // * 'weDett' =>'Ir al detalle',
+     'messNoArt' => 'No hay artículos',
 
      // ? fine index
 

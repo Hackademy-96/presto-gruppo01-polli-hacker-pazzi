@@ -23,7 +23,7 @@
             @empty 
             <div class="col-12">
                 <div class='alert alert-warning'>
-                    <p class='lead'>Non ci sono annunci</p>
+                    <p class='lead'>{{__('ui.messNoArt')}}</p>
                 </div>
             </div>
             @endforelse

@@ -74,6 +74,12 @@ return[
     'rev2'=>"There are no articles to review",
     'revsi'=>"Accept",
     'revno'=>"Refuse",
+    'ciSonoAncora' => 'There are still',
+    'articoliDaRevisionare' => 'articles to review',
+    'prossArt' => 'Next Article:',
+    'caricatoUtente' => 'Uploaded by the user :',
+    'cateRev' => 'Category :',
+    'revTito' => 'Title :',
 
     // ? create-form
     // 'aggArticoli'=>'Crea il tuo articolo!',
@@ -109,5 +115,6 @@ return[
     // ? index
     // 'tuttiArticoli'=>'Tutti gli articoli',
     // 'weDett'=>'Vai al dettaglio',
+    'messNoArt' => 'There are no articles'
 
 ];

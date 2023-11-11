@@ -92,11 +92,11 @@
             Presto.it
           </h6>
           <p>
-            {{__('ui.teamWork')}}
-
-          </p>
-          <p>
             @guest
+            <p>
+              {{__('ui.teamWork')}}
+  
+            </p>
             <a href="{{route('become.revisor')}}" class="text-reset btn bgA">
               {{__('ui.rev')}}
             </a>     
