@@ -116,6 +116,12 @@ return[
     // 'tuttiArticoli'=>'Tutti gli articoli',
     // 'weDett'=>'Vai al dettaglio',
     'messNoArt' => 'There are no articles',
-
+    //? messaggi
+    'domandaRev' => 'Thank you for contacting us.',
+    'confermaRev' => 'Congratulations! The user has become a revisor.',
+    'accessoNeg' => 'Attention! Only revisors agreed',
+    'artInviato' => 'Article sent! It will be revised soon!',
+    'annAccettato' => 'Announcement accepted.',
+    'annRifiutato' => 'Announcement declined.',
  
 ];

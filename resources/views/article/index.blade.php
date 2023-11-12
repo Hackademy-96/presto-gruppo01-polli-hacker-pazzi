@@ -21,7 +21,7 @@
                 </div>
             </div>
             @empty 
-            <div class="col-12">
+            <div class="col-12 text-center mb-5">
                 <div class='alert alert-warning'>
                     <p class='lead'>{{__('ui.messNoArt')}}</p>
                 </div>

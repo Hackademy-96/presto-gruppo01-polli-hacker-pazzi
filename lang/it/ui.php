@@ -116,7 +116,12 @@ return[
     // 'tuttiArticoli'=>'Tutti gli articoli',
     // 'weDett'=>'Vai al dettaglio',
     'messNoArt' => 'Non ci sono articoli',
-
-
+    // ? messaggi
+    'domandaRev' => 'Grazie per averci contattato.',
+    'confermaRev' => 'Congratulazioni! L\'utente è diventato revisore',
+    'accessoNeg' => 'Attenzione! Solo i revisiori hanno acccesso',
+    'artInviato' => 'Articolo inviato! Verrà revisionato a breve!',
+    'annAccettato' => 'Annuncio accettato.',
+    'annRifiutato' => 'Annuncio rifiutato.',
 
 ];

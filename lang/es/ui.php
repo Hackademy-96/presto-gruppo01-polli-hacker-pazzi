@@ -134,8 +134,13 @@ return[
      'messNoArt' => 'No hay artículos',
 
      // ? fine index
-
-
+    //? messaggi
+     'domandaRev' => 'Gracias por contactarnos.',
+     'confermaRev' => '¡Felicidades! El usuario se ha convertido en revisor.',
+     'accessoNeg' => '¡Atención! Solo los revisores han admitido',
+     'artInviato' => '¡Artículo enviado!¡Será revisado en breve!',
+     'annAccettato' => 'Anuncio aceptado.',
+     'annRifiutato' => 'Anuncio rechazado.',
 
 ];
 
