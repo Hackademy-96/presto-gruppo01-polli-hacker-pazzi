@@ -89,6 +89,7 @@ class CreateForm extends Component
 
                 File::deleteDirectory(storage_path('/app/livewire-tmp'));
             }
+
             
             return redirect(route('welcome'))->with('message', __('ui.artInviato'));
             $this->reset();

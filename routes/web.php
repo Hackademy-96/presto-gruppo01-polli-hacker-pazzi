@@ -29,6 +29,7 @@ Route::post('/lingua/{lang}' , [PublicController::class, 'setLanguage'])->name('
 Route::get('/revisor/home',[RevisorController::class , 'index'])->middleware('isRevisor')->name('revisor.index');
 Route::patch('/accept/article/{article}',[RevisorController::class , 'acceptArticle'])->middleware('isRevisor')->name('revisor.accept_article');
 Route::patch('/reject/article/{article}',[RevisorController::class , 'rejectArticle'])->middleware('isRevisor')->name('revisor.reject_article');
+Route::patch('/undo/article/{article}',[RevisorController::class , 'undoArticle'])->middleware('isRevisor')->name('revisor.undo_article');
 
 
 Route::get('/richiesta/revisore',[RevisorController::class , 'becomeRevisor'])->middleware('auth')->name('become.revisor');

@@ -82,6 +82,8 @@ return[
     'caricatoUtente' => 'Uploaded by the user :',
     'cateRev' => 'Category :',
     'revTito' => 'Title :',
+    'revUnn' => 'Undo',
+    'revUndo' => 'Last action was undone',
 
     // ? create-form
     // 'aggArticoli'=>'Crea il tuo articolo!',
