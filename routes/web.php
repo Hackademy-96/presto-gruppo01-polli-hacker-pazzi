@@ -19,10 +19,10 @@ Route::get('/', [PublicController::class, 'welcome'])->name('welcome');
 // 
 Route::get('/article.create',[ArticleController::class , 'create'])->name('article_create');
 Route::get('/show/{article}',[ArticleController::class , 'show'])->name('article_show');
-Route::get('/article.index',[ArticleController::class , 'index'])->name('article_index');
-Route::get('/category.show/{category}',[ArticleController::class , 'categoryShow'])->name('categoryShow');
+Route::get('/article/index',[ArticleController::class , 'index'])->name('article_index');
+Route::get('/category/show/{category}',[ArticleController::class , 'categoryShow'])->name('categoryShow');
 
-Route::get('/articles.search',[PublicController::class , 'searchArticles'])->name('articles.search');
+Route::get('/articles/search',[PublicController::class , 'searchArticles'])->name('articles.search');
 Route::post('/lingua/{lang}' , [PublicController::class, 'setLanguage'])->name('setLocale');
 
 

@@ -14,9 +14,10 @@
                     </div></a>
                     <div class="card-body text-center">
                         <h4 class="card-title">{{$article->title}}</h4>
+                        <h5 class="card-title colorC">{{$article->category->name}}</h5>
                         <p class="text-muted">{{$article->description}}...</p>
                         <p class="text-muted">{{$article->price}} €</p>
-                        <a class="btn bgA btn-sm" href="{{route('article_show', compact('article'))}}">{{__('ui.weDett')}}</a>
+                        <a class="btn bgA" href="{{route('article_show', compact('article'))}}">{{__('ui.weDett')}}</a>
                     </div>
                 </div>
             </div>

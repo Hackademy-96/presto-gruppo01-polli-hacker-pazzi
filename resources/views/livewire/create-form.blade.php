@@ -1,5 +1,5 @@
 <div>
-  <section class="h-100 h-custom bgS m-0">
+  <section class="h-100 h-custom bgS bgRepeat m-0">
     <div class="divAltezza"></div>
     <div class="container p-3 h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">

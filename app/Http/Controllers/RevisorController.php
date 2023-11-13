@@ -21,12 +21,12 @@ class RevisorController extends Controller
     {   
         $article->setAccepted(true);
         
-        return redirect(route('welcome'))->with('message', __('ui.annAccettato'));
+        return back()->with('message', __('ui.annAccettato'));
     }
     public function rejectArticle(Article $article)
     {
         $article->setAccepted(false);
-        return redirect(route('welcome'))->with('message', __('ui.annRifiutato'));
+        return back()->with('message', __('ui.annRifiutato'));
     }
     public function becomeRevisor(){
         return view('auth.formRevisor');

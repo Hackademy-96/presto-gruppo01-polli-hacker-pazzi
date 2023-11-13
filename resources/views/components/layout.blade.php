@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
   
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
 <x-navbar></x-navbar>
     {{$slot}}
 {{-- <x-header></x-header> --}}

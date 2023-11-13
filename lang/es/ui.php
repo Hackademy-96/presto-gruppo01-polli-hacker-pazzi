@@ -47,7 +47,7 @@ return[
     // ? fine footer
 
     // ? balloons
-    'ballcat' => 'Nuestras categorías',
+    'ballCat' => 'Nuestras categorías',
     'paragrafBall' => 'Esta es la sección dedicada a las categorías de productos a la venta en nuestro sitio',
     'paraBall' => '¡Haga clic para echar un vistazo!',
     'bottBall' => 'Descubre más',
@@ -73,7 +73,8 @@ return[
 
     // ? categoryShow
     'catTitolo' => 'Ver todos los artículos en',
-
+    'catOps' => 'Ops parece que no hay artículos para esta categoría',
+    'catSlogan' => '¿Qué estás esperando? Sé el primero en añadir uno!',
     // * 'weDett' =>'Ir al detalle',
     // * categorie dalla navbar
 
@@ -111,7 +112,7 @@ return[
     // ? fine register
 
     // ? login
-    'logTitolo' => '¡Bienvenido!', 
+    'logTitolo' => 'Bienvenido', 
     'logParaf' => 'Si no tienes una cuenta', 
     // * 'registrati' => 'Regístrate',
     // * 'accedi' => 'Accede',

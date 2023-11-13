@@ -1,9 +1,8 @@
 <x-layout>
-  <div class="container-fluid mt-5">
-    
+  <div class="container-fluid mt-5">    
     <div class="row  mt-5 justify-content-evenly">
-      <div class="col-12">
-        <h1 class="display-2 text-center mt-2 colorP">{{__('ui.logTitolo')}} {{Auth::user()->name}}</h1>
+      <div class="col-12 mt-5">
+        <h1 class="display-1 text-center mt-2 colorP">{{__('ui.logTitolo')}} {{Auth::user()->name}}</h1>
       </div>
       <div class="col-12 text-center mt-3">
         @if($article_to_check)
@@ -17,6 +16,18 @@
       </div>
     </div>
   </div>
+  @if(session('message'))
+  <div class="container mt-3">
+    <div class="row">
+      <div class="col-12 d-flex justify-content-center text-center">
+        <div class=" alert alert-success alert-dismissible fade show bunner" role="alert">
+          <strong></strong>{{session('message')}}
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  @endif
   <div class="container-fluid p-0">
     <div class="row mt-5">
       <div class="col-12 ">
@@ -71,8 +82,8 @@
           </div>
         </div>
         
-        <div class="col-8 col-md-4 col-sm-8">
-          <div class="card-body ms-5 ps-5">
+        <div class="col-8 col-md-4 col-sm-8 text-center">
+          <div class="card-body">
             <h2 class="card-title mb-5">{{__('ui.caricatoUtente')}} <span class="colorC">{{$article_to_check->user->name}}</span></h2>
             <h3 class="card-text colorP">{{__('ui.revTito')}}</h3>
             <p class="fs-5">{{$article_to_check->title}}</p>
@@ -85,7 +96,7 @@
             <h3 class="card-text colorP">{{__('ui.showData')}}</h3>
             <p class="fs-5">{{$article_to_check->created_at->format('d/m/Y')}}</p>
             
-            <div class="d-flex justify-content-start  my-5">
+            <div class="d-flex justify-content-center  my-5">
               <form action="{{route('revisor.accept_article', ['article'=>$article_to_check])}}" method="POST">
                 @csrf
                 @method('PATCH')
@@ -104,5 +115,6 @@
     </div>
   </div>
   @endif
-  
+  <div class="divAltezza"></div>
+  <div class="divAltezza"></div>
 </x-layout>

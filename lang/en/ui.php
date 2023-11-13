@@ -68,6 +68,8 @@ return[
     // 'weDett'=>'Go to detail',
     // * categorie come in navabar
     'catTitolo'=>"See all articles in",
+    'catOps' => 'Ops looks like there are no articles for this category',
+    'catSlogan' => 'What are you waiting for? Be the first to add one!',
 
     // ? revindex
     'rev1'=>"Here is the article to be revised",
@@ -98,7 +100,7 @@ return[
     'reBot'=>"Submit",
 
     // ? login
-    'logTitolo'=>"Welcome back!",
+    'logTitolo'=>"Welcome back",
     'logParaf'=>"If you don't have an account",
     // 'registrati'=>'Registrati',
     // 'accedi'=>'Accedi',

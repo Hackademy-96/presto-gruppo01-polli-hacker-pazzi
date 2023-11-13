@@ -68,6 +68,8 @@ return[
     // 'weDett'=>'Vai al dettaglio',
     // * categorie come in navabar
     'catTitolo'=>"Guarda tutti gli articoli in",
+    'catOps' => 'Ops sembra non ci siano articoli per questa categoria',
+    'catSlogan' => 'Cosa stai aspettando? Sii il primo ad aggiungerne uno!',
 
     // ? revindex
     'rev1'=>"Ecco l'annuncio da revisionare",
@@ -98,7 +100,7 @@ return[
     'reBot'=>"Invia",
 
     // ? login
-    'logTitolo'=>"Bentornato!",
+    'logTitolo'=>"Bentornato",
     'logParaf'=>"Se non hai un account",
     // 'registrati'=>'Registrati',
     // 'accedi'=>'Accedi',

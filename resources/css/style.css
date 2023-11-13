@@ -156,14 +156,14 @@ ul {
  }
  */
 .bg-image{
-    background-image: url('https://images.unsplash.com/photo-1628744876497-eb30460be9f6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background: linear-gradient(180deg, rgba(0,0,0,0.285) 0%, rgba(0,0,0,0.285) 100%), url('https://images.unsplash.com/photo-1628744876497-eb30460be9f6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
     height:  600px;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative; 
 }
 .bg-shadow{
-    background-color: rgba(0, 0, 0, 0.285);
+    background-size: cover;
     height: 100%;
     width: 100%;
    position: absolute;
@@ -316,6 +316,10 @@ a{
 	text-decoration:none;
 }
 /* ? fine bubble category */
+/* ? bg che si ripete */
+.bgRepeat{
+    background: linear-gradient(180deg, rgba(202,233,255, 0.7) 0%, rgba(202,233,255, 0.7) 100%), url('public\media\sfondo (1).jpg');
+}
 
 
 /* ? what is this? who knos */

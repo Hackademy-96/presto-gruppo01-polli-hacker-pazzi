@@ -1,5 +1,5 @@
 <x-layout>
-  <section class="h-100 bgS shadow">
+  <section class="h-100 bgS bgRepeat shadow">
     <div class="container py-5 h-100 mt-5 ">
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col">

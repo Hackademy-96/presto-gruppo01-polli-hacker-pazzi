@@ -1,5 +1,5 @@
 <!-- Footer -->
-<footer class="bgE text-center mt-0">
+<footer class="bgE text-center mt-auto">
     <!-- Grid container -->
     <div class="container p-4">
       <!-- Section: Social media -->
@@ -53,7 +53,11 @@
         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
           <!-- Content -->
           <h6 class="text-uppercase fw-bold mb-4">
-            <i class="fas fa-gem me-3"></i>Presto
+            <a class="navbar-brand" href="#">
+
+              <img src="https://media.discordapp.net/attachments/1168854256120500224/1172184835322818610/IMG_0449.png?ex=655f6532&is=654cf032&hm=529a257399153a3de899354677d3a70816209a9bce2336e1dc9c80aa073946a4&=&width=605&height=605" alt="" height="80px">
+            </a>
+          </i>Presto
           </h6>
           <p>
             {{__('ui.footerDesc')}}
