@@ -60,10 +60,14 @@
 }
 
 /* ? div per altezza */
-.divAltezza{
+/* .divAltezza{
     height: 20vh;
-}
+} */
 /* ? div per altezza */
+
+.slotHeight{
+    min-height: calc(100vh - 300px);
+}
 
 /* ? inizio footer */
 .footer {
@@ -160,6 +164,7 @@ ul {
     height:  600px;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     position: relative; 
 }
 .bg-shadow{
@@ -378,7 +383,7 @@ img{
     }
 
     .logoHeader{
-        width: 300px;
+        width: 270px;
     }
 
 }

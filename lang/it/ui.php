@@ -37,7 +37,7 @@ return[
     // ? footer
     'nome'=>'- Polli Hacker Pazzi! -',
     'footerDesc'=>'Siamo un gruppo di junior web developer e abbiamo sviluppato questo sito da zero, dal back-end al front-end, speriamo vi possa piacere buona permaneza!',
-    'team'=>'Conosci il Team!',
+    'team'=>'Creato da:',
     'teamWork'=>'Lavora con noi',
     'rev'=>'Diventa Revisore',
 
