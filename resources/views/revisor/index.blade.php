@@ -28,7 +28,7 @@
     </div>
   </div>
   @endif
-  <div class="container-fluid p-0">
+  <div class="container-fluid">
     <div class="row mt-5">
       <div class="col-12 ">
         <h1 class="display-3 text-center colorP">
@@ -39,9 +39,10 @@
         </h1>
       </div>
     </div>
+  </div>
     @if ($article_to_check)
     
-    <div class="container-fluid mt-5 p-0">
+    <div class="container-fluid mt-5 ">
       <div class="row d-flex justify-content-center">
         <div class="col-8 col-md-4 ">
           <div>

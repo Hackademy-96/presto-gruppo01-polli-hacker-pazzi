@@ -1,9 +1,9 @@
 <x-layout>
-  <section class="h-100 bgS bgRepeat shadow">
+  <section class="h-100 bgRepeat">
     <div class="container py-5 h-100 mt-5 ">
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col">
-          <div class="card card-registration my-4 border border-0">
+          <div class="card card-registration my-4 border border-0 shadow-lg">
             <div class="row g-0">
               <div class="col-xl-6 d-none d-xl-block ">
                 <img src="./media/register.jpg"
