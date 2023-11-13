@@ -9,9 +9,11 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
   
 </head>
-<body class="d-flex flex-column min-vh-100">
+<body class="d-flex flex-column ">
 <x-navbar></x-navbar>
+<div class="slotHeight ">
     {{$slot}}
+</div>
 {{-- <x-header></x-header> --}}
 {{-- <x-card></x-card> --}}
 <x-footer></x-footer>
