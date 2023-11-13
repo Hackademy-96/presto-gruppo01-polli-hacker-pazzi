@@ -24,7 +24,7 @@ class ArticleController extends Controller
     }
 
     public function index(){
-        $articles = Article::orderBy('created_at', 'desc')->where('is_accepted', true)->paginate(6);
+        $articles = Article::orderBy('created_at', 'desc')->where('is_accepted', true)->get();
         return view('article.index', compact('articles'));
     }
 
@@ -35,7 +35,7 @@ class ArticleController extends Controller
     } */
 
     public function categoryShow(Category $category){
-        $articles = Article::orderBy('created_at', 'desc')->where('is_accepted', true)->paginate(6);
+        $articles = Article::orderBy('created_at', 'desc')->where('is_accepted', true)->get();       
         return view('categoryShow', compact('category', 'articles'));
     }
 }
