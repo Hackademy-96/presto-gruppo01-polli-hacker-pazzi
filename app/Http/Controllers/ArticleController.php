@@ -35,8 +35,7 @@ class ArticleController extends Controller
     } */
 
     public function categoryShow(Category $category){
-        $articles = Article::orderBy('created_at', 'desc')->where('is_accepted', true)->get();
-       
+        $articles = Article::orderBy('created_at', 'desc')->where('is_accepted', true)->get();       
         return view('categoryShow', compact('category', 'articles'));
     }
 }

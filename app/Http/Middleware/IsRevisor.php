@@ -19,6 +19,6 @@ class IsRevisor
         if (Auth::check() && Auth::user()->is_revisor){
             return $next($request);
         }
-        return redirect('/')->with('access.denied' , 'Attenzione! Solo i revisiori hanno acccesso');
+        return redirect('/')->with('access.denied' , __('ui.accessoNeg'));
     }
 }

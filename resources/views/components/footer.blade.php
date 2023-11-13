@@ -1,7 +1,7 @@
 <!-- Footer -->
-<footer class="bgE text-center mt-0">
+<footer class="bgE text-center mt-auto">
     <!-- Grid container -->
-    <div class="container-fluid p-4">
+    <div class="container p-4">
       <!-- Section: Social media -->
       {{-- <section class="mb-4">
         <!-- Facebook -->
@@ -39,7 +39,7 @@
       <!-- Section: Text -->
       <section class="mb-4">
         <p>
-          <strong>- Polli Hacker Pazzi! -</strong>
+          <strong>{{__('ui.nome')}}</strong>
         </p>
       </section>
       <!-- Section: Text -->
@@ -53,11 +53,14 @@
         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
           <!-- Content -->
           <h6 class="text-uppercase fw-bold mb-4">
-            <i class="fas fa-gem me-3"></i>Presto
+            <a class="navbar-brand" href="#">
+
+              <img src="https://media.discordapp.net/attachments/1168854256120500224/1172184835322818610/IMG_0449.png?ex=655f6532&is=654cf032&hm=529a257399153a3de899354677d3a70816209a9bce2336e1dc9c80aa073946a4&=&width=605&height=605" alt="" height="80px">
+            </a>
+          </i>Presto
           </h6>
           <p>
-            Here you can use rows and columns to organize your footer content. Lorem ipsum
-            dolor sit amet, consectetur adipisicing elit.
+            {{__('ui.footerDesc')}}
           </p>
         </div>
         <!-- Grid column -->
@@ -66,7 +69,7 @@
         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
           <!-- Links -->
           <h6 class="text-uppercase fw-bold mb-4">
-            Team PHP
+            {{__('ui.team')}}
           </h6>
           <p>
             <a href="#!" class="text-reset">Margherita Bombi</a>
@@ -93,14 +96,24 @@
             Presto.it
           </h6>
           <p>
-            Lavora con noi 
-          </p>
-         
-          <p>
-            Registrati e clicca qui!
-          </p>
-          <p>
-            <a href="{{route('become.revisor')}}" class="text-reset btn bgA">Diventa Revisore</a>
+            @guest
+            <p>
+              {{__('ui.teamWork')}}
+  
+            </p>
+            <a href="{{route('become.revisor')}}" class="text-reset btn bgA">
+              {{__('ui.rev')}}
+            </a>     
+            @endguest
+            @auth
+            @if (!Auth::user()->is_revisor)
+            <a href="{{route('become.revisor')}}" class="text-reset btn bgA">
+              {{__('ui.rev')}}
+            </a>     
+            @endif
+                
+            @endauth
+            
           </p>
         </div>
         <!-- Grid column -->

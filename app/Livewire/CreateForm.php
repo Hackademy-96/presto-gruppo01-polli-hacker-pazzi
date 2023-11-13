@@ -34,17 +34,17 @@ class CreateForm extends Component
     
     
     protected $messages=[
-        'title.required'=>"Il titolo è obbligatorio",
-        'title.min'=>"Il titolo deve avere almeno cinque caratteri",
-        'description.required'=>"La descrizione è obbligatoria",
-        'description.min'=>"La descrizione deve avere almeno dieci caratteri",
-        'price.required'=>"Il prezzo è obbligatorio",
-        'price.numeric'=>"Il prezzo deve essere un numero",
-        'temporary_images.required'=>"L'immagine è richiesta",
-        'temporary_images.*.image'=>"I file devono essere immagini!",
-        'temporary_images.*.max'=>"L'immagine deve essere massimo di 1mb",
-        'images.image'=>"L'immagine dev'essere un immagine",
-        'images.max'=>"L'immagine dev'essere di 1mb",
+        // 'title.required'=>"Il titolo è obbligatorio",
+        // 'title.min'=>"Il titolo deve avere almeno cinque caratteri",
+        // 'description.required'=>"La descrizione è obbligatoria",
+        // 'description.min'=>"La descrizione deve avere almeno dieci caratteri",
+        // 'price.required'=>"Il prezzo è obbligatorio",
+        // 'price.numeric'=>"Il prezzo deve essere un numero",
+        // 'temporary_images.required'=>"L'immagine è richiesta",
+        // 'temporary_images.*.image'=>"I file devono essere immagini!",
+        // 'temporary_images.*.max'=>"L'immagine deve essere massimo di 1mb",
+        // 'images.image'=>"L'immagine dev'essere un immagine",
+        // 'images.max'=>"L'immagine dev'essere di 1mb",
         
         
     ];
@@ -88,7 +88,7 @@ class CreateForm extends Component
                 File::deleteDirectory(storage_path('/app/livewire-tmp'));
             }
             
-            return redirect(route('welcome'))->with('message', "Articolo inviato! Verrà revisionato a breve!");
+            return redirect(route('welcome'))->with('message', __('ui.artInviato'));
             $this->reset();
             
         }

@@ -1,18 +1,18 @@
 <x-layout>
-    <section class="h-100 bgS mt-5">
-        <div class="container py-5 h-100">
+    <section class="h-100 bgS bgRepeat ">
+        <div class="container py-5 h-100 mt-5">
             <div class="row d-flex justify-content-center align-items-center h-100">
-                <div class="col">
+                <div class="col-12">
                     <div class="card card-registration my-4 border border-0">
-                        <div class="row g-0">
-                            <div class="col-xl-6 d-none d-xl-block">
-                                <img src="https://picsum.photos/800/900"
+                        <div class="row g-0 justify-content-between ">
+                            <div class="col-xl-5 d-none d-xl-block">
+                                <img src="./media/login.jpg"
                                 alt="Sample photo" class="img-fluid"
                                 style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;" />
                             </div>
                             <div class="col-xl-6">
                                 <div class="card-body p-md-5 text-black text-center">
-                                    <h3 class="mb-5 text-uppercase colorC">Bentornato!</h3>
+                                    <h3 class="mb-5 text-uppercase colorC">{{__('ui.logTitolo')}}</h3>
                                     @if ($errors->any())
                                     <div class="alert alert-danger">
                                         <ul>
@@ -105,12 +105,12 @@
                                         
                                         <div class="d-flex justify-content-around pt-3 mb-5">
                                             {{-- <button type="button" class="btn btn-light btn-lg">Reset all</button> --}}
-                                            <button type="submit" class="btn bgA btn-lg ms-2">Accedi</button>
+                                            <button type="submit" class="btn bgA btn-lg ms-2">{{__('ui.accedi')}}</button>
                                         </div>
                                         <div >
-                                            <p>Se non hai un account </p>
+                                            <p>{{__('ui.logParaf')}}</p>
                                             
-                                            <a href="{{route('register')}}" type="button" class="btn bgC btn-lg ms-2">Registrati</a>
+                                            <a href="{{route('register')}}" type="button" class="btn bgC btn-lg ms-2">{{__('ui.registrati')}}</a>
                                         </div>
                                         
                                     </form>
