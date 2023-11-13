@@ -14,7 +14,8 @@ class RevisorController extends Controller
     public function index()
     {
         $article_to_check = Article::where('is_accepted', null)->first();
-        return view('revisor.index', compact('article_to_check'));
+        $article_to_undo = Article::whereNotNull('is_accepted')->orderBy('created_at','DESC')->first();
+        return view('revisor.index', compact('article_to_check','article_to_undo'));
     }
 
     public function acceptArticle(Article $article)
@@ -27,6 +28,12 @@ class RevisorController extends Controller
     {
         $article->setAccepted(false);
         return back()->with('message', __('ui.annRifiutato'));
+    }
+    public function undoArticle(Article $article)
+    {
+        $article->setAccepted(null);
+
+        return back()->with('message', __('ui.revUndo'));
     }
     public function becomeRevisor(){
         return view('auth.formRevisor');

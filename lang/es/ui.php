@@ -91,6 +91,8 @@ return[
     'caricatoUtente' => "Cargado por el usuario :",
     'cateRev' => 'Categoría :',
     'revTito' => 'Título :',
+    'revUnn' => 'Cancela',
+    'revUndo' => 'Última operación cancelada',
      // ? fine revindex
 
      // ? create-form

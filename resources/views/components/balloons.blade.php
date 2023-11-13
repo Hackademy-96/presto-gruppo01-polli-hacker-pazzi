@@ -19,35 +19,35 @@
         <div class="col-6 col-md-2">
           <div class="icon-box " > <i class="fas fa-tshirt navlink shadow" aria-hidden="true"></i> 
             <h5>{{__('ui.cat1Ball')}}</h5>
-            <a href="{{('category.show/1')}}" class="about-btn">{{__('ui.bottBall')}}</a>
+            <a href="{{('category/show/1')}}" class="about-btn">{{__('ui.bottBall')}}</a>
           </div>
         </div>
         
         <div class="col-6 col-md-2">
           <div class="icon-box"> <i class="fa-solid fa-dog navlink shadow" aria-hidden="true"></i>
             <h5>{{__('ui.cat2Ball')}}</h5>
-            <a href="{{('category.show/2')}}" class="about-btn">{{__('ui.bottBall')}}</a>
+            <a href="{{('category/show/2')}}" class="about-btn">{{__('ui.bottBall')}}</a>
           </div>
         </div>
         
         <div class="col-6 col-md-2">
           <div class="icon-box"> <i class="fa-solid fa-chess-rook navlink shadow" aria-hidden="true"></i>
             <h5>{{__('ui.cat3Ball')}}</h5>
-            <a href="{{('category.show/3')}}" class="about-btn">{{__('ui.bottBall')}}</a>
+            <a href="{{('category/show/3')}}" class="about-btn">{{__('ui.bottBall')}}</a>
           </div>
         </div>
         
         <div class="col-6 col-md-2">
           <div class="icon-box"> <i class="fa-solid fa-couch navlink shadow" aria-hidden="true"></i>
             <h5>{{__('ui.cat4Ball')}}</h5>
-            <a href="{{('category.show/4')}}" class="about-btn">{{__('ui.bottBall')}}</a>
+            <a href="{{('category/show/4')}}" class="about-btn">{{__('ui.bottBall')}}</a>
           </div>
         </div>
         
         <div class="col-6 col-md-2">
           <div class="icon-box"> <i class="fa-solid fa-computer navlink shadow" aria-hidden="true"></i>
             <h5>{{__('ui.cat5Ball')}}</h5>
-            <a href="{{('category.show/5')}}" class="about-btn">{{__('ui.bottBall')}}</a>
+            <a href="{{('category/show/5')}}" class="about-btn">{{__('ui.bottBall')}}</a>
           </div>
         </div>
         
@@ -55,35 +55,35 @@
           <div class="col-6 col-md-2 me-md-1">
             <div class="icon-box text-center"> <i class=" fa-solid fa-puzzle-piece navlink shadow" aria-hidden="true"></i>
               <h5>{{__('ui.cat6Ball')}}</h5>
-              <a href="{{('category.show/6')}}" class="about-btn">{{__('ui.bottBall')}}</a>
+              <a href="{{('category/show/6')}}" class="about-btn">{{__('ui.bottBall')}}</a>
             </div>
           </div>
           
           <div class="col-6 col-md-2">
             <div class="icon-box"> <i class="fa-solid fa-book navlink shadow" aria-hidden="true"></i>
               <h5>{{__('ui.cat7Ball')}}</h5>
-              <a href="{{('category.show/7')}}" class="about-btn">{{__('ui.bottBall')}}</a>
+              <a href="{{('category/show/7')}}" class="about-btn">{{__('ui.bottBall')}}</a>
             </div>
           </div>
           
           <div class="col-6 col-md-2">
             <div class="icon-box"> <i class="fa-solid fa-motorcycle navlink shadow" aria-hidden="true"></i>
               <h5>{{__('ui.cat8Ball')}}</h5>
-              <a href="{{('category.show/8')}}" class="about-btn">{{__('ui.bottBall')}}</a>
+              <a href="{{('category/show/8')}}" class="about-btn">{{__('ui.bottBall')}}</a>
             </div>
           </div>
           
           <div class="col-6 col-md-2">
             <div class="icon-box"> <i class="fa-solid fa-headphones navlink shadow" aria-hidden="true"></i>
               <h5>{{__('ui.cat9Ball')}}</h5>
-              <a href="{{('category.show/9')}}" class="about-btn">{{__('ui.bottBall')}}</a>
+              <a href="{{('category/show/9')}}" class="about-btn">{{__('ui.bottBall')}}</a>
             </div>
           </div>
           
           <div class="col-6 col-md-2">
             <div class="icon-box "> <i class="fa-solid fa-glasses navlink shadow" aria-hidden="true"></i>
               <h5>{{__('ui.cat10Ball')}}</h5>
-              <a href="{{('category.show/10')}}" class="about-btn">{{__('ui.bottBall')}}</a>
+              <a href="{{('category/show/10')}}" class="about-btn">{{__('ui.bottBall')}}</a>
             </div>
           </div>
 

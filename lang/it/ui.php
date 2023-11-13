@@ -82,6 +82,8 @@ return[
     'caricatoUtente' => "Caricato dall'utente :",
     'cateRev' => 'Categoria :',
     'revTito' => 'Titolo :',
+    'revUnn' => 'Annulla',
+    'revUndo' => 'Ultima operazione annullata',
 
     // ? create-form
     // 'aggArticoli'=>'Crea il tuo articolo!',
