@@ -1,10 +1,9 @@
 <div>
   <section class="h-100 h-custom bgS bgRepeat m-0">
-    <div class="divAltezza"></div>
-    <div class="container p-3 h-100">
-      <div class="row d-flex justify-content-center align-items-center h-100">
+    <div class="container p-3 h-100 mt-5">
+      <div class="row d-flex justify-content-center align-items-center h-100 mt-5">
         <div class="col-md-8 col-lg-8">
-          <div class="card rounded-3 border border-0">
+          <div class="card rounded-3 border border-0 shadow-lg p-3">
             <img src="./media/create-form.jpg"
             class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;"
             alt="Sample photo">

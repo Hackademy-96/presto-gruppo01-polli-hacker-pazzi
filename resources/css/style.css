@@ -318,7 +318,7 @@ a{
 /* ? fine bubble category */
 /* ? bg che si ripete */
 .bgRepeat{
-    background: linear-gradient(180deg, rgba(202,233,255, 0.7) 0%, rgba(202,233,255, 0.7) 100%), url('public\media\sfondo (1).jpg');
+    background: linear-gradient(180deg, rgba(202,233,255, 0.7) 0%, rgba(202,233,255, 0.7) 100%), url('/public/media/sfondo\ \(1\).jpg');
 }
 
 
