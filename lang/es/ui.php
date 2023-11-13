@@ -41,7 +41,7 @@ return[
     // ? footer
     'nome' => '- ¡Pollos hackers locos! -',
     'footerDesc' => '¡Somos un grupo de desarrolladores web junior y hemos desarrollado este sitio desde cero, desde el back-end hasta el front-end, esperamos que disfruten de su estancia!',
-    'team' => '¡Conoce al Equipo!',
+    'team' => 'Creado por:',
     'teamWork' => 'Trabaja con nosotros',
     'rev' => '¡Conviértete en Revisor!',
     // ? fine footer
