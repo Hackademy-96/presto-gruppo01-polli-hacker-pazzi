@@ -129,11 +129,15 @@
                 @method('PATCH')
                 <button class="btn bgC btn-lg ms-2 " type="submit">{{__('ui.revno')}}</button>
               </form>
+
+              @if(!$article_to_undo==null) 
               <form action="{{route('revisor.undo_article', ['article'=>$article_to_undo])}}" method="POST">
                 @csrf
                 @method('PATCH')
                 <button class="btn btn-danger btn-lg ms-2 " type="submit">{{__('ui.revUnn')}}</button>
               </form>
+              @endif
+
             </div>
           </div>
         </div>
