@@ -44,7 +44,7 @@
                 <div class="carousel-inner rounded-4 shadow-lg">
                   @foreach ($article->images as $image)
                   <div class="carousel-item @if($loop->first) active @endif" data-bs-interval="10000">
-                    <img src="{{Storage::url($image->path)}}" class="d-block w-100 imgCarousel" alt="...">
+                    <img src="{{Storage::url($image->path)}}" class="img-fluid w-100 imgCarousel" alt="...">
                   </div>  
                   @endforeach
                 </div>
