@@ -9,7 +9,7 @@
             <div class="col-md-4 col-sm-6 mb-5">
                 <div class="card h-100 shadow-lg mb-30"><a class="card-img-tiles" href="#" data-abc="true">
                     <div class="inner">
-                        <div class="main-img img-card"><img src="{{!$article->images()->get()->isEmpty() ? Storage::url($article->images()->first()->path) : 'https://picsum.photos/500'}}" alt="Category"></div>
+                        <div class="main-img"><img src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(300, 300) : 'https://picsum.photos/300'}}" alt="Category"></div>
                         
                     </div></a>
                     <div class="card-body text-center">

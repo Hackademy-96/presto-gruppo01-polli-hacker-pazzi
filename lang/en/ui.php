@@ -37,7 +37,7 @@ return[
     // ? footer
     'nome'=>'- Crazy Hacker Chickens! -',
     'footerDesc'=>'We are a group of junior web developers and we developed this site from scratch, from the back end to the front end, we hope you will enjoy your stay!',
-    'team'=>'Meet the Team!',
+    'team'=>'Created by:',
     'teamWork'=>'Work with us',
     'rev'=>'Become Revisor',
 
@@ -82,6 +82,8 @@ return[
     'caricatoUtente' => 'Uploaded by the user :',
     'cateRev' => 'Category :',
     'revTito' => 'Title :',
+    'revUnn' => 'Undo',
+    'revUndo' => 'Last action was undone',
 
     // ? create-form
     // 'aggArticoli'=>'Crea il tuo articolo!',

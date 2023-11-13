@@ -28,7 +28,7 @@
     </div>
   </div>
   @endif
-  <div class="container-fluid p-0">
+  <div class="container-fluid">
     <div class="row mt-5">
       <div class="col-12 ">
         <h1 class="display-3 text-center colorP">
@@ -39,9 +39,10 @@
         </h1>
       </div>
     </div>
+  </div>
     @if ($article_to_check)
     
-    <div class="container-fluid mt-5 p-0">
+    <div class="container-fluid mt-5 ">
       <div class="row d-flex justify-content-center">
         <div class="col-8 col-md-4 ">
           <div>
@@ -51,7 +52,28 @@
                 @foreach ($article_to_check->images as $image)
                 <div class=" carousel-item slideC @if($loop->first) active @endif" data-bs-interval="10000">
                   <img src="{{Storage::url($image->path)}}" class="d-block w-100 h-100 imgCarousel" alt="...">
-                </div>  
+                </div>
+                <div class="col-md-3 border-end">
+                  <h5 class="tc-accent mt-3">Tags</h5>
+                  <div class="p-2">
+                    @if ($image->labels)
+                    @dd($labels)
+                    @foreach ($image->labels as $label)
+                        <p class="d-inline">{{$label}}</p>
+                    @endforeach
+                    @endif
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card-body">
+                    <h5 class="tc-accent">Revisione Immagine</h5>
+                    <p>Adulti: <span class="{{$image->adult}}"></span></p>
+                    <p>Satira: <span class="{{$image->spoof}}"></span></p>
+                    <p>Medicina: <span class="{{$image->medical}}"></span></p>
+                    <p>Violenza: <span class="{{$image->violence}}"></span></p>
+                    <p>Contenuto Ammiccante: <span class="{{$image->racy}}"></span></p>
+                  </div>
+                </div>
                 @endforeach
               </div>
               @else
@@ -106,6 +128,11 @@
                 @csrf
                 @method('PATCH')
                 <button class="btn bgC btn-lg ms-2 " type="submit">{{__('ui.revno')}}</button>
+              </form>
+              <form action="{{route('revisor.undo_article', ['article'=>$article_to_undo])}}" method="POST">
+                @csrf
+                @method('PATCH')
+                <button class="btn btn-danger btn-lg ms-2 " type="submit">{{__('ui.revUnn')}}</button>
               </form>
             </div>
           </div>
