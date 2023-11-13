@@ -1,13 +1,12 @@
 <x-layout>
-  <div class="bgS">
-    <div class="divAltezza"></div>
-    <div class="container bgE borderRev shadow rounded ">
-      <div class="row justify-content-center">
+  <div class="bgS mt-5">
+    <div class="container bgE borderRev shadow rounded mt-5 ">
+      <div class="row justify-content-center mt-5">
         <div class="col-12 col-md-8 col-lg-6 mt-5">
           <h2 class=" mt-5 mb-5 text-center">{{__('ui.revTitolo')}}</h2>
           <h1 class=" display-3 mt-5 mb-5 mx-5 text-center colorC">{{__('ui.rev')}}</h1>
           <h4 class="text-center mb-5">{{__('ui.revSlogan')}}</h4>
-          <p class="text-center mb-5 colorC border-bottom border-secondary">{{__('ui.revSlogan2')}}</p>
+          <h5 class="text-center mb-5 colorC border-bottom border-secondary">{{__('ui.revSlogan2')}}</h5>
         </div>
         <div class="row justify-content-center">
           <div class="col-12 col-md-6 col-lg-8 ">
