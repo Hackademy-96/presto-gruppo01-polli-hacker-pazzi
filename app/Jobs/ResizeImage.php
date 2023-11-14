@@ -19,6 +19,7 @@ class ResizeImage implements ShouldQueue
     private $h;
     private $fileName;
     private $path;
+    
 
     /**
      * Create a new job instance.
@@ -44,6 +45,12 @@ class ResizeImage implements ShouldQueue
 
         $croppedImage = Image::load($srcPath)
                         ->crop(Manipulations::CROP_CENTER, $w, $h)
+                        ->watermark('public/media/pulcino.png')
+                        ->watermarkOpacity(50)
+                        ->watermarkPosition(Manipulations::POSITION_CENTER)
+                        ->watermarkPadding(10, 10, Manipulations::UNIT_PERCENT)
                         ->save($destPath);
+
+       
     }
 }
