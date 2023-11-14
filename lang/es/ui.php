@@ -93,6 +93,8 @@ return[
     'revTito' => 'Título :',
     'revUnn' => 'Cancela',
     'revUndo' => 'Última operación cancelada',
+    'revImm' => 'Revisión de imagen',
+    'revDesc' => 'Revisión de datos',
      // ? fine revindex
 
      // ? create-form

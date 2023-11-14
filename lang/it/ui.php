@@ -36,7 +36,7 @@ return[
 
     // ? footer
     'nome'=>'- Polli Hacker Pazzi! -',
-    'footerDesc'=>'Siamo un gruppo di junior web developer e abbiamo sviluppato questo sito da zero, dal back-end al front-end, speriamo vi possa piacere buona permaneza!',
+    'footerDesc'=>'Siamo un gruppo di junior web developer e abbiamo sviluppato questo sito da zero, dal back-end al front-end, speriamo vi possa piacere buona permanenza!',
     'team'=>'Creato da:',
     'teamWork'=>'Lavora con noi',
     'rev'=>'Diventa Revisore',
@@ -84,6 +84,8 @@ return[
     'revTito' => 'Titolo :',
     'revUnn' => 'Annulla',
     'revUndo' => 'Ultima operazione annullata',
+    'revImm' => 'Revisione immagine',
+    'revDesc' => 'Revisione dati',
 
     // ? create-form
     // 'aggArticoli'=>'Crea il tuo articolo!',
