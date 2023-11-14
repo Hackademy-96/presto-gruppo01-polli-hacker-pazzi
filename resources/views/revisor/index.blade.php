@@ -70,6 +70,7 @@
                     <div class="col-md-4" style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
                       <div>
                         <div id="carouselExampleInterval" class="carousel carosello slide" data-bs-ride="carousel">
+                          @isset($article_to_check)
                           @if(count($article_to_check->images))
                           <div class="carousel-inner rounded-4 shadow-lg carouselSize">
                             @foreach ($article_to_check->images as $image)
@@ -164,12 +165,14 @@
                       </div>
                     </div>
                     @endif
+                     @endisset
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
+        @isset($article_to_check)
   
         <div class="d-flex justify-content-center">
           <form action="{{route('revisor.accept_article', ['article'=>$article_to_check])}}" method="POST">
@@ -183,6 +186,7 @@
             <button class="btn bgC btn-lg ms-2 " type="submit">{{__('ui.revno')}}</button>
           </form>
         </div>
+        @endisset
       </div>
     </div>
   </div>
