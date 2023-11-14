@@ -1,7 +1,5 @@
 <x-layout>
-    
-    <div class="container mt-100">
-        
+    <div class="container mt-100">     
         <div class="row">
             <div class="col-12 text-center mb-5">
                 <h1 class="display-1 colorP">{{__('ui.tuttiArticoli')}}</h1>
