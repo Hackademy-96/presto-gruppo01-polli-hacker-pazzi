@@ -64,10 +64,16 @@
     height: 20vh;
 } */
 /* ? div per altezza */
-
+/* ? profile */
+.gradient-custom{
+    background: linear-gradient(to right bottom, var(--color-C),var(--color-S))
+}
+/* ? profile */
+/* ? altezza slot in layoput */
 .slotHeight{
     min-height: calc(100vh - 300px);
 }
+/* ? altezza slot in layoput */
 
 /* ? inizio footer */
 .footer {
