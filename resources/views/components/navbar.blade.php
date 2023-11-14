@@ -38,7 +38,7 @@
                         @endforeach
                     </ul>
                 </div>
-
+                
                 <li class="nav-item">
                     <a class="nav-link navlink text-white" href="{{route('article_index')}}">
                         <i class="fa-solid fa-inbox"></i> {{__('ui.tuttiArticoli')}}
@@ -53,8 +53,36 @@
                 </li>
                 
                 <li class="nav-item dropdown">
-                    <a class="nav-link navlink active dropdown-toggle fw-bold nav-text-custom" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-user"></i> {{__('ui.saluto')}} {{Auth::user()->name}}</a>
+                    <a class="nav-link navlink active dropdown-toggle fw-bold nav-text-custom position-relative" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> 
+                    <i class="fa-solid fa-user"></i> 
+                    @if(App\Models\Article::toBeRevisionedCount() > 0)
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        <small>{{App\Models\Article::toBeRevisionedCount()}}</small> 
+                        <span class="visually-hidden">{{__('ui.messRev')}}</span>
+                    </span>
+                    @endif
+                    {{__('ui.saluto')}} {{Auth::user()->name}}
+                    </a>
                     <ul class="dropdown-menu">
+                        <li class="dropdown-item">
+                            <a class="colorB" href="{{route('profile')}}"> 
+                                <i class="fa-solid fa-circle-user"></i>
+                                Profilo
+                            </a>
+                        </li>
+                       
+                        <li>
+                            @if (Auth::user()->is_revisor)
+                            <li class="dropdown-item">
+                                <a class="colorB" href="{{route('revisor.index')}}">
+                                    <i class="fa-solid fa-id-card fa-lg ">
+                                       
+                                    </i> {{__('ui.revisorZone')}}
+                                </a>
+                            </li>
+                            @endif
+                            
+                        </li>
                         <li class="dropdown-item">
                             <form method="POST" action="{{route('logout')}}">
                                 @csrf
@@ -64,21 +92,7 @@
                     </ul>
                 </li> 
                 
-                @if (Auth::user()->is_revisor)
-                <li class="nav-item">
-                    <a class="nav-link navlink text-white position-relative" href="{{route('revisor.index')}}">
-                        <i class="fa-solid fa-id-card fa-lg ">
-                            @if(App\Models\Article::toBeRevisionedCount() > 0)
-                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                                {{App\Models\Article::toBeRevisionedCount()}}
-                                <span class="visually-hidden">{{__('ui.messRev')}}</span>
-                            </span>
-                            @endif
-                        </i> {{__('ui.revisorZone')}}
-                    </a>
-                </li>
-                @endif
-                    
+                
                 @endauth
             </ul>
             <span class="d-flex p-0">

@@ -27,5 +27,11 @@ class PublicController extends Controller
     return redirect()->back();
     
    }
+
+
+   public function profile(){
+
+    return view('auth.profile');
+   }
 }
 

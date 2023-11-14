@@ -1,4 +1,5 @@
 <x-layout>
+    
     <div class="container mt-100">
         
         <div class="row">
@@ -22,11 +23,13 @@
                 </div>
             </div>
             @empty 
-            <div class="col-12 text-center mb-5">
-                <div class='alert alert-warning'>
-                    <p class='lead'>{{__('ui.messNoArt')}}</p>
+            <div class="row justify-content-center">
+            <div class="col-6 text-center">
+                <div class='alert bgA shadow'>
+                    <h3 class='my-3'>{{__('ui.messNoArt')}}</h3>
                 </div>
             </div>
+        </div>
             @endforelse
         </div>
     </div>

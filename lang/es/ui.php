@@ -91,6 +91,8 @@ return[
     'caricatoUtente' => "Cargado por el usuario :",
     'cateRev' => 'Categoría :',
     'revTito' => 'Título :',
+    'revUnn' => 'Cancela',
+    'revUndo' => 'Última operación cancelada',
      // ? fine revindex
 
      // ? create-form
@@ -132,7 +134,7 @@ return[
 
     // *  'tuttiArticoli' => 'Todos los artículos',
      // * 'weDett' =>'Ir al detalle',
-     'messNoArt' => 'No hay artículos',
+     'messNoArt' => 'No hay artículos para esta búsqueda',
 
      // ? fine index
     //? messaggi

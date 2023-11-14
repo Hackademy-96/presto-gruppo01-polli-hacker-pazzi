@@ -82,6 +82,8 @@ return[
     'caricatoUtente' => 'Uploaded by the user :',
     'cateRev' => 'Category :',
     'revTito' => 'Title :',
+    'revUnn' => 'Undo',
+    'revUndo' => 'Last action was undone',
 
     // ? create-form
     // 'aggArticoli'=>'Crea il tuo articolo!',
@@ -117,7 +119,7 @@ return[
     // ? index
     // 'tuttiArticoli'=>'Tutti gli articoli',
     // 'weDett'=>'Vai al dettaglio',
-    'messNoArt' => 'There are no articles',
+    'messNoArt' => 'There are no articles for this search',
     //? messaggi
     'domandaRev' => 'Thank you for contacting us.',
     'confermaRev' => 'Congratulations! The user has become a revisor.',

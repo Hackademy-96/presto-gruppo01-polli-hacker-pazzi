@@ -4,11 +4,11 @@ namespace App\Jobs;
 
 use App\Models\Image;
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldBeUnique;
+use Illuminate\Queue\SerializesModels;
+use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
-use Illuminate\Queue\InteractsWithQueue;
-use Illuminate\Queue\SerializesModels;
+use Illuminate\Contracts\Queue\ShouldBeUnique;
 use Google\Cloud\Vision\V1\ImageAnnotatorClient;
 
 class GoogleVisionSafeSearch implements ShouldQueue
@@ -16,10 +16,10 @@ class GoogleVisionSafeSearch implements ShouldQueue
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
     private $article_image_id;
-    /**
-     * @return void
-     */
 
+    /**
+     * Create a new job instance.
+     */
     public function __construct($article_image_id)
     {
         $this->article_image_id = $article_image_id;
@@ -30,7 +30,6 @@ class GoogleVisionSafeSearch implements ShouldQueue
      */
     public function handle(): void
     {
-        
         $i = Image::find($this->article_image_id);
 
         if(!$i){
@@ -55,7 +54,7 @@ class GoogleVisionSafeSearch implements ShouldQueue
 
         echo json_encode([$adult, $medical]);
         
-        $likelihoodName = ['text-secondary fas-fa cirle' , 'text- success fas-fa circle' , 'text- success fas-fa circle' ,  'text-warning fas-fa-circle' , 'text-warning fas-fa-circle' , 'text-danger fas-fa-circle'];
+        $likelihoodName = ['text-secondary fas fa-circle' , 'text-success fas fa-circle' , 'text-success fas fa-circle' ,  'text-warning fas fa-circle' , 'text-warning fas fa-circle' , 'text-danger fas fa-circle'];
         
         $i->adult = $likelihoodName [$adult];
         $i->medical = $likelihoodName [$medical];
@@ -64,7 +63,5 @@ class GoogleVisionSafeSearch implements ShouldQueue
         $i->racy = $likelihoodName [$racy];
 
         $i->save();
-
-
     }
 }

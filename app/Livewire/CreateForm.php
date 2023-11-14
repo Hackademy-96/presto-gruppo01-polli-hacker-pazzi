@@ -2,11 +2,11 @@
 
 namespace App\Livewire;
 
+use App\Jobs\GoogleVisionSafeSearch;
 use App\Models\Article;
 use Livewire\Component;
 use App\Models\Category;
 use App\Jobs\ResizeImage;
-use App\Jobs\GoogleVisionSafeSearch;
 use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
@@ -89,6 +89,7 @@ class CreateForm extends Component
 
                 File::deleteDirectory(storage_path('/app/livewire-tmp'));
             }
+
             
             return redirect(route('welcome'))->with('message', __('ui.artInviato'));
             $this->reset();

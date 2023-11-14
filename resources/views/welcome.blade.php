@@ -31,7 +31,7 @@
             <div class="col-12 col-md-6 col-lg-4 mb-5">
                 <div class="h-100 card card-new shadow-lg mx-2"><a class="card-img-tiles" href="#" data-abc="true">
                     <div class="inner">
-                        <div class="main-img position-relative"><img src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(300, 300) : 'https://picsum.photos/300'}}" alt="Category">
+                        <div class="main-img position-relative img-card"><img src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(300, 300) : 'https://picsum.photos/300'}}" alt="Category">
                             <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bgC">
                                 new
                                 <span class="visually-hidden"></span>

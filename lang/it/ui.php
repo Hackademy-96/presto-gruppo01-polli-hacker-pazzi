@@ -82,6 +82,8 @@ return[
     'caricatoUtente' => "Caricato dall'utente :",
     'cateRev' => 'Categoria :',
     'revTito' => 'Titolo :',
+    'revUnn' => 'Annulla',
+    'revUndo' => 'Ultima operazione annullata',
 
     // ? create-form
     // 'aggArticoli'=>'Crea il tuo articolo!',
@@ -117,7 +119,7 @@ return[
     // ? index
     // 'tuttiArticoli'=>'Tutti gli articoli',
     // 'weDett'=>'Vai al dettaglio',
-    'messNoArt' => 'Non ci sono articoli',
+    'messNoArt' => 'Non ci sono articoli per questa ricerca',
     // ? messaggi
     'domandaRev' => 'Grazie per averci contattato.',
     'confermaRev' => 'Congratulazioni! L\'utente è diventato revisore',
