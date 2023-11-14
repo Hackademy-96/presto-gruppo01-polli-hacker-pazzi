@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Presto</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
- 
+    
+    <link rel="shortcut icon" href="./media/pulcino.png" type="image/x-icon">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
-  
+    
 </head>
 <body class="d-flex flex-column ">
 <x-navbar></x-navbar>
