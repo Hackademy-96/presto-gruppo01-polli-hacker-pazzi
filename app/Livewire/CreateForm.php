@@ -2,7 +2,9 @@
 
 namespace App\Livewire;
 
+use App\Jobs\GoogleVisionLableImage;
 use App\Jobs\GoogleVisionSafeSearch;
+use App\Jobs\RemoveFaces;
 use App\Models\Article;
 use Livewire\Component;
 use App\Models\Category;
@@ -83,13 +85,18 @@ class CreateForm extends Component
                     $newFileName = "articles/{$article->id}";
                     $newImage = $article->images()->create(['path'=>$image->store($newFileName,'public')]);
                     
-                    dispatch(new ResizeImage($newImage->path, 300, 300),);
-                    dispatch(new GoogleVisionSafeSearch($newImage->id));
-                }
+                    RemoveFaces::withChain([
+                        (new ResizeImage($newImage->path, 300, 300)),
+                        (new GoogleVisionSafeSearch($newImage->id)),
+                        (new GoogleVisionLableImage($newImage->id))
 
+                    ])->dispatch($newImage->id);
+                    
+                }
+                
                 File::deleteDirectory(storage_path('/app/livewire-tmp'));
             }
-
+            
             
             return redirect(route('welcome'))->with('message', __('ui.artInviato'));
             $this->reset();
