@@ -84,6 +84,8 @@ return[
     'revTito' => 'Titolo :',
     'revUnn' => 'Annulla',
     'revUndo' => 'Ultima operazione annullata',
+    'revImm' => 'Revisione immagine',
+    'revDesc' => 'Revisione dati',
 
     // ? create-form
     // 'aggArticoli'=>'Crea il tuo articolo!',
