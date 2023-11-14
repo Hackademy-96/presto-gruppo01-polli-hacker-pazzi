@@ -45,10 +45,12 @@ class ResizeImage implements ShouldQueue
 
         $croppedImage = Image::load($srcPath)
                         ->crop(Manipulations::CROP_CENTER, $w, $h)
-                        ->watermark('public/media/pulcino.png')
+                        ->watermark('public/media/logo.png')
                         ->watermarkOpacity(50)
-                        ->watermarkPosition(Manipulations::POSITION_CENTER)
+                        ->watermarkPosition(Manipulations::POSITION_BOTTOM_RIGHT)
                         ->watermarkPadding(10, 10, Manipulations::UNIT_PERCENT)
+                        ->watermarkHeight(20, Manipulations::UNIT_PERCENT)
+                        ->watermarkWidth(40, Manipulations::UNIT_PERCENT)
                         ->save($destPath);
 
        

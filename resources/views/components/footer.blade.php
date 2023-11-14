@@ -78,7 +78,7 @@
             <a href="#!" class="text-reset">Valeria Saponaro</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Noemi Podda</a>
+            <a href="#!" class="text-reset">Nick Podda</a>
           </p>
           <p>
             <a href="#!" class="text-reset">Leonardo Garofalo</a>
