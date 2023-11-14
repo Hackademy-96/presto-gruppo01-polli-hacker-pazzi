@@ -84,6 +84,8 @@ return[
     'revTito' => 'Title :',
     'revUnn' => 'Undo',
     'revUndo' => 'Last action was undone',
+    'revImm' => 'Image review',
+    'revDesc' => 'Data review',
 
     // ? create-form
     // 'aggArticoli'=>'Crea il tuo articolo!',

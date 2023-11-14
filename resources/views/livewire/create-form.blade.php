@@ -30,9 +30,10 @@
                 
                 <div class="form-floating">
                   <textarea wire:model.live='description' class="form-control @error('description') is-invalid @enderror" placeholder="Leave a description here" id="floatingTextarea" style="height: 100px">{{__('ui.creDesc')}}</textarea>
-                  <label for="floatingTextarea">{{__('ui.crePlace')}}</label>
+                  <label class="desc" for="floatingTextarea">{{__('ui.crePlace')}}</label>
                 </div>
                 <label for="floatingTextarea">{{__('ui.creDesc')}}</label>
+
                 <div class="row">
                   <div class="col-md-6 mb-4 mt-4">
                     <div class="form-outline datepicker">
@@ -47,7 +48,7 @@
                     @foreach ($categories as $category)
                     <div class="form-check col-6">
                       <input wire:model.live.defer="category_id" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked value="{{$category->id}}" >
-                      <label class="form-check-label" for="flexRadioDefault2">
+                      <label class="form-check-label desc" for="flexRadioDefault2">
                         {{__("ui.$category->name")}}
                       </label>
                     </div>

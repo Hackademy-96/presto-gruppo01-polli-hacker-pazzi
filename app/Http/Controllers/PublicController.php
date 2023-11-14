@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Mail\BecomeRevisor;
 use App\Models\Article;
+use App\Mail\BecomeRevisor;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PublicController extends Controller
 {
@@ -30,8 +31,8 @@ class PublicController extends Controller
 
 
    public function profile(){
-
-    return view('auth.profile');
+    $articles = Article::where('user_id', Auth::user()->id)->paginate(2);
+    return view('auth.profile', compact('articles'));
    }
 }
 

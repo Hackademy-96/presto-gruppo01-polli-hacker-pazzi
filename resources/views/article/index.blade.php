@@ -29,6 +29,7 @@
             </div>
         </div>
             @endforelse
+            {{$articles->links()}}
         </div>
     </div>
 </x-layout>
