@@ -1,8 +1,8 @@
 <x-layout>
-<div class="container pt-5">
+<div class="container-fluid pt-5 h-profile bgS bgRepeat m-0 d-flex align-items-end">
     <div class="row pt-5">
-        <div class="col-12">
-            <h1>Profilo</h1>
+        <div class="col-12 ">
+            <h1 class="colorD">Bentornato {{Auth::user()->name}}</h1>
         </div>
     </div>
 </div>
@@ -24,6 +24,7 @@
                 @endif
                 <i class="far fa-edit mb-5"></i>
               </div>
+              
               <div class="col-md-8">
                 <div class="card-body p-4">
                   <h6>Information</h6>

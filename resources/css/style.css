@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
 :root{
     --color-P : #006494;
     --color-S : #CAE9FF;
@@ -8,6 +11,7 @@
     --color-W : #ffffff;
     --color-B : #000000;
 }
+
 
 /* ?COLORS */
 .colorP{
@@ -111,7 +115,7 @@
 body{
     /* background-image: url('https://wallpaperaccess.com/full/4640657.jpg'); */
     height: fit-content;
-
+    font-family: 'Roboto', sans-serif;
     margin: 0; /* Rimuove il margine predefinito del corpo */
     padding: 0; /* Rimuove il riempimento predefinito del corpo */
     display: flex;
@@ -190,6 +194,23 @@ ul {
 .horizontal-radio-group .form-check {
     margin-right: 10px; /* Aggiunge un margine tra gli elementi radio */
 }
+
+/* .hamburger{
+    border-color: var(--color-S);
+    
+}  */
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'><path stroke='rgb(204, 234, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  }
+  
+.navbar-toggler {
+    border-color: var(--color-S);
+  }
+
+.rounded-pill{
+    font-size: 11px !important;
+} 
+
 /* ? fine navbar */
 
 
@@ -372,6 +393,13 @@ img{
     object-fit: cover; 
 }
 
+/* inizio pagina profilo */
+.h-profile{
+    height: 25vh;
+}
+
+/* fine pagina profilo */
+
 /* ? inizio media query */
 /* ! media query navbar */
 @media (max-width:1280px) {
@@ -397,6 +425,10 @@ img{
 
     .logoHeader{
         width: 270px;
+    }
+
+    .desc{
+        font-size: small;
     }
 
 }
