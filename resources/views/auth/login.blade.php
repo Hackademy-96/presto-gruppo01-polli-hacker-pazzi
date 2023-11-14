@@ -6,7 +6,7 @@
                     <div class="card card-registration my-4 border border-0">
                         <div class="row g-0 justify-content-between ">
                             <div class="col-xl-5 d-none d-xl-block">
-                                <img src="./media/login.jpg"
+                                <img src="/media/login.jpg"
                                 alt="Sample photo" class="img-fluid"
                                 style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;" />
                             </div>
