@@ -62,6 +62,7 @@
           @endif
   
         <section>
+          @if ($article_to_check)
           <div class="container-fluid py-2 rounded-3">
             <div class="row d-flex justify-content-start align-items-center h-100">
               <div class="col-12 mb-4">
@@ -70,6 +71,7 @@
                     <div class="col-md-4" style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
                       <div>
                         <div id="carouselExampleInterval" class="carousel carosello slide" data-bs-ride="carousel">
+                          
                           @if(count($article_to_check->images))
                           <div class="carousel-inner rounded-4 shadow-lg carouselSize">
                             @foreach ($article_to_check->images as $image)
@@ -107,7 +109,6 @@
                       </div>
                     </div>
   
-                    @if ($article_to_check)
                     <div class="col-md-8">
                       <div class="row">
                         <div class="col-md-9">
@@ -170,7 +171,7 @@
             </div>
           </div>
         </section>
-  
+        @if ($article_to_check)
         <div class="d-flex justify-content-center">
           <form action="{{route('revisor.accept_article', ['article'=>$article_to_check])}}" method="POST">
             @csrf
@@ -183,6 +184,7 @@
             <button class="btn bgC btn-lg ms-2 " type="submit">{{__('ui.revno')}}</button>
           </form>
         </div>
+        @endif
       </div>
     </div>
   </div>

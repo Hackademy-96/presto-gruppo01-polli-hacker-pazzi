@@ -1,79 +1,76 @@
 <x-layout>
   <div class="container-fluid pt-5 h-profile bgS bgRepeat m-0 d-flex align-items-end">
     <div class="row pt-5">
-      <div class="col-12 ">
-        <h1 class="colorD">Bentornato {{Auth::user()->name}}</h1>
+      <div class="col-12">
+        <h1 class="colorD text-center">Bentornato {{Auth::user()->name}}</h1>
       </div>
     </div>
   </div>
-  <section class="">
-    <div class="container py-5 h-100">
-      <div class="row justify-content-around h-100">
-        <div class="col-12 col-md-5 mb-4">
-          <div class="card  mb-3 align-self-start" style="border-radius: .5rem;">
+  
+  <section class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <div class="card mb-3 align-self-start" style="border-radius: .5rem;">
             <div class="row g-0">
-              <div class="col-md-4  gradient-custom text-center text-white"
-              style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
-              <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
-              alt="Avatar" class="img-fluid my-5" style="width: 80px;" />
-              <h5>{{Auth::user()->name}}</h5>
-              @if (!Auth::user()->is_revisor)
-              <p>Utente</p>
-              @else
-              <p>Revisore</p>
-              @endif
-              <i class="far fa-edit mb-5"></i>
-            </div>
-            
-            <div class="col-md-8">
-              <div class="card-body p-4">
-                <h6>Information</h6>
-                <hr class="mt-0 mb-4">
-                <div class="row pt-1">
-                  <div class="col-6 mb-3">
-                    <h6>Email</h6>
-                    <p class="text-muted">{{Auth::user()->email}}</p>
+              <div class="col-md-5 gradient-custom text-center text-white" style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp" alt="Avatar" class="img-fluid my-5 mx-auto d-block" style="width: 80px;">
+                <h5>{{Auth::user()->name}}</h5>
+                @if (!Auth::user()->is_revisor)
+                <p>Utente</p>
+                @else
+                <p>Revisore</p>
+                @endif
+                <i class="far fa-edit mb-5"></i>
+              </div>
+              <div class="col-12 col-md-7">
+                <div class="card-body p-4">
+                  <h6>Information</h6>
+                  <hr class="mt-0 mb-4">
+                  <div class="row pt-1">
+                    <div class="col-md-6">
+                      <h6>Email</h6>
+                      <p class="text-muted">{{Auth::user()->email}}</p>
+                    </div>
+                    <div class="col-md-6">
+                      <h6>Nome</h6>
+                      <p class="text-muted">{{Auth::user()->name}}</p>
+                    </div>
                   </div>
-                  <div class="col-6 mb-3">
-                    <h6>Nome</h6>
-                    <p class="text-muted">{{Auth::user()->name}}</p>
+                  <h6>Articoli pubblicati</h6>
+                  <hr class="mt-0 mb-4">
+                  <div class="row pt-1">
+                    <div class="col-md-6">
+                      <h6>Recent</h6>
+                      <p class="text-muted">Lorem ipsum</p>
+                    </div>
+                    <div class="col-md-6">
+                      <h6>Most Viewed</h6>
+                      <p class="text-muted">Dolor sit amet</p>
+                    </div>
                   </div>
-                </div>
-                <h6>Articoli pubblicati</h6>
-                <hr class="mt-0 mb-4">
-                <div class="row pt-1">
-                  <div class="col-6 mb-3">
-                    <h6>Recent</h6>
-                    <p class="text-muted">Lorem ipsum</p>
+                  <div class="d-flex justify-content-start">
+                    <a href="#!"><i class="fab fa-facebook-f fa-lg me-3"></i></a>
+                    <a href="#!"><i class="fab fa-twitter fa-lg me-3"></i></a>
+                    <a href="#!"><i class="fab fa-instagram fa-lg"></i></a>
                   </div>
-                  <div class="col-6 mb-3">
-                    <h6>Most Viewed</h6>
-                    <p class="text-muted">Dolor sit amet</p>
-                  </div>
-                </div>
-                <div class="d-flex justify-content-start">
-                  <a href="#!"><i class="fab fa-facebook-f fa-lg me-3"></i></a>
-                  <a href="#!"><i class="fab fa-twitter fa-lg me-3"></i></a>
-                  <a href="#!"><i class="fab fa-instagram fa-lg"></i></a>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-7">
-        
-        <div class="row justify-content-center">
-          @foreach ($articles as $article)
-          <div class="col-12 col-md-6 mb-4">
-            
-            <div class="card h-100 shadow-lg " style = "width:18rem">
-              <a class="card-img-tiles" href="#" data-abc="true">
-                <div class="inner">
-                  <div class="main-img"><img src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(300, 300) : 'https://picsum.photos/300'}}" alt="Category"></div>
-                  
-                </div>
-              </a>
+        <div class="col-md-6"> 
+          <div class="row">
+            @foreach ($articles as $article)
+            <div class="col-12 col-sm-6 mb-4">
+              <div class="card h-100 shadow-lg">
+                <a class="card-img-tiles" href="#" data-abc="true">
+                  <div class="inner">
+                    <div class="main-img">
+                      <img src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(300, 300) : 'https://picsum.photos/300'}}" alt="Category" class="img-fluid">
+                    </div>
+                  </div>
+                </a>
                 <div class="card-body text-center">
                   <h4 class="card-title">{{$article->title}}</h4>
                   <h5 class="card-title colorC">{{$article->category->name}}</h5>
@@ -83,21 +80,14 @@
                 </div>
               </div>
             </div>
-
             @endforeach
           </div>
-          
-          
         </div>
       </div>
+      
+      <div class="col-12 d-flex justify-content-center"> 
+        {{$articles->links()}}
+      </div>
     </div>
-    {{$articles->links()}}
   </section>
-  
-  
-  
-  
-
-
-
 </x-layout>
