@@ -55,11 +55,13 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link navlink active dropdown-toggle fw-bold nav-text-custom position-relative" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> 
                     <i class="fa-solid fa-user"></i> 
+                    @if (Auth::user()->is_revisor)
                     @if(App\Models\Article::toBeRevisionedCount() > 0)
                     <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                         <small>{{App\Models\Article::toBeRevisionedCount()}}</small> 
                         <span class="visually-hidden">{{__('ui.messRev')}}</span>
                     </span>
+                    @endif
                     @endif
                     {{__('ui.saluto')}} {{Auth::user()->name}}
                     </a>
