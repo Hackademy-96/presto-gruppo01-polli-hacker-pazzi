@@ -95,6 +95,9 @@ return[
     'revUndo' => 'Última operación cancelada',
     'revImm' => 'Revisión de imagen',
     'revDesc' => 'Revisión de datos',
+    'revOp' => 'Última operación',
+    'revAccept' => 'Artículo aceptados',
+    'revReject' => 'Artículo rechazados.',
      // ? fine revindex
 
      // ? create-form
@@ -121,6 +124,14 @@ return[
     // * 'registrati' => 'Regístrate',
     // * 'accedi' => 'Accede',
     // ? fine login
+
+        // ? Profilo
+    // 'logTitolo'=>"Bentornato",
+    'profRev'=>"Revisor",
+    'profUte'=>"Usuario",
+    'profInfo'=>"Informaciones",
+    'profArt'=>"Perfiles sociales",
+
 
     // ? formrevisor
     'revTitolo' => '¿Quieres trabajar con nosotros?',

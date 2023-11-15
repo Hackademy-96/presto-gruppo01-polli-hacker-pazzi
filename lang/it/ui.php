@@ -86,6 +86,9 @@ return[
     'revUndo' => 'Ultima operazione annullata',
     'revImm' => 'Revisione immagine',
     'revDesc' => 'Revisione dati',
+    'revOp' => 'Ultima operazione',
+    'revAccept' => 'Articolo accettato',
+    'revReject' => 'Articolo Rifiutato',
 
     // ? create-form
     // 'aggArticoli'=>'Crea il tuo articolo!',
@@ -108,6 +111,13 @@ return[
     'logParaf'=>"Se non hai un account",
     // 'registrati'=>'Registrati',
     // 'accedi'=>'Accedi',
+    // ? Profilo
+    // 'logTitolo'=>"Bentornato",
+    'profRev'=>"Revisore",
+    'profUte'=>"Utente",
+    'profInfo'=>"Informazioni",
+    'profArt'=>"Profili Social",
+
 
     // ? formrevisor
     'revTitolo'=>"Vuoi lavorare con noi?",

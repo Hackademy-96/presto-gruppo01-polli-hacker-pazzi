@@ -16,6 +16,18 @@
             @endif
           </div>
         </div>
+        @if(session('message'))
+        <div class="container mt-3">
+          <div class="row">
+            <div class="col-12 d-flex justify-content-center text-center">
+              <div class=" alert alert-success alert-dismissible fade show bunner" role="alert">
+                <strong></strong>{{session('message')}}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        @endif
         @if(!$article_to_undo == null) 
         <div class="container mt-3">
           <div class="row justify-content-center">
@@ -24,11 +36,11 @@
                 <thead>
                   <tr class="table-light">
                     <th scope="col ">ID</th>
-                    <th scope="col ">Ultima operazione</th>
-                    <th scope="col ">titotlo:</th>
-                    <th scope="col ">creato:</th>
-                    <th scope="col ">descrizione:</th>
-                    <th scope="col ">prezzo:</th>
+                    <th scope="col ">{{__('ui.revOp')}}</th>
+                    <th scope="col ">{{__('ui.revTito')}}</th>
+                    <th scope="col ">{{__('ui.showData')}}</th>
+                    <th scope="col ">{{__('ui.showDesc')}}</th>
+                    <th scope="col ">{{__('ui.showPrez')}}</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -36,9 +48,9 @@
                     <th scope="row">{{$article_to_undo->id}}</th>
                     <td>
                       @if ($article_to_undo->is_accepted == 1)
-                      <p>accettato</p>
+                      <p>{{__('ui.revAccept')}}</p>
                       @else   
-                      <p>rifiutato</p> 
+                      <p>{{__('ui.revReject')}}</p> 
                       @endif</td>
                     <td>{{$article_to_undo->title}}</td>
                     <td>{{$article_to_undo->created_at->format('d/m/Y')}}</td>

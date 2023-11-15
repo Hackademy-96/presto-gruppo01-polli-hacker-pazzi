@@ -2,7 +2,7 @@
   <div class="container-fluid pt-5 h-profile bgS bgRepeat m-0 d-flex align-items-end">
     <div class="row pt-5">
       <div class="col-12">
-        <h1 class="colorD text-center">Bentornato {{Auth::user()->name}}</h1>
+        <h1 class="colorD text-center">{{__('ui.logTitolo')}}{{Auth::user()->name}}</h1>
       </div>
     </div>
   </div>
@@ -17,15 +17,15 @@
                 <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp" alt="Avatar" class="img-fluid my-5 mx-auto d-block" style="width: 80px;">
                 <h5>{{Auth::user()->name}}</h5>
                 @if (!Auth::user()->is_revisor)
-                <p>Utente</p>
+                <p>{{__('ui.profUte')}}</p>
                 @else
-                <p>Revisore</p>
+                <p>{{__('ui.profRev')}}</p>
                 @endif
                 <i class="far fa-edit mb-5"></i>
               </div>
               <div class="col-12 col-md-7">
                 <div class="card-body p-4">
-                  <h6>Information</h6>
+                  <h6>{{__('ui.profInfo')}}</h6>
                   <hr class="mt-0 mb-4">
                   <div class="row pt-1">
                     <div class="col-md-6">
@@ -33,20 +33,20 @@
                       <p class="text-muted">{{Auth::user()->email}}</p>
                     </div>
                     <div class="col-md-6">
-                      <h6>Nome</h6>
+                      <h6>{{__('ui.reName')}}</h6>
                       <p class="text-muted">{{Auth::user()->name}}</p>
                     </div>
                   </div>
-                  <h6>Articoli pubblicati</h6>
+                  <h6>{{__('ui.profArt')}}</h6>
                   <hr class="mt-0 mb-4">
                   <div class="row pt-1">
                     <div class="col-md-6">
-                      <h6>Recent</h6>
-                      <p class="text-muted">Lorem ipsum</p>
+                      
+                      <p class="text-muted"></p>
                     </div>
                     <div class="col-md-6">
-                      <h6>Most Viewed</h6>
-                      <p class="text-muted">Dolor sit amet</p>
+                      <h6></h6>
+                      <p class="text-muted"></p>
                     </div>
                   </div>
                   <div class="d-flex justify-content-start">

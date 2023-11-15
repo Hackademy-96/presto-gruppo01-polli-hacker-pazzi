@@ -86,6 +86,9 @@ return[
     'revUndo' => 'Last action was undone',
     'revImm' => 'Image review',
     'revDesc' => 'Data review',
+    'revOp' => 'Last action',
+    'revAccept' => 'Article accepted',
+    'revReject' => 'Article rejected',
 
     // ? create-form
     // 'aggArticoli'=>'Crea il tuo articolo!',
@@ -108,6 +111,14 @@ return[
     'logParaf'=>"If you don't have an account",
     // 'registrati'=>'Registrati',
     // 'accedi'=>'Accedi',
+
+        // ? Profilo
+    // 'logTitolo'=>"Bentornato",
+    'profRev'=>"Revisor",
+    'profUte'=>"User",
+    'profInfo'=>"Info",
+    'profArt'=>"Social profiles",
+
 
     // ? formrevisor
     'revTitolo'=>"Do you want to work with us?",
