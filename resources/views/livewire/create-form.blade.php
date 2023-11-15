@@ -4,7 +4,7 @@
       <div class="row d-flex justify-content-center align-items-center h-100 mt-5">
         <div class="col-md-8 col-lg-8">
           <div class="card rounded-3 border border-0 shadow-lg p-3">
-            <img src="./media/create-form.jpg"
+            <img src="/media/create-form.jpg"
             class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;"
             alt="Sample photo">
             <div class="card-body p-4 p-md-5">

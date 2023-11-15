@@ -89,5 +89,6 @@
         {{$articles->links()}}
       </div>
     </div>
+    {{$articles->links()}}
   </section>
 </x-layout>
